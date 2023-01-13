@@ -11,6 +11,10 @@
         "format": "prettier --write ./**/*.{vue,ts,tsx,js,jsx,css,less,scss,json,md}"
     },
     "dependencies": {
+        "axios": "^1.2.2",
+        "dayjs": "^1.11.7",
+        "lodash": "^4.17.21",
+        "pinia": "^2.0.28",
         "vue": "^3.2.45"
     },
     "devDependencies": {
@@ -18,6 +22,9 @@
         "@babel/core": "^7.20.12",
         "@babel/eslint-parser": "^7.19.1",
         "@typescript-eslint/eslint-plugin": "^5.48.1",
+        "@unocss/preset-attributify": "^0.48.3",
+        "@unocss/preset-icons": "^0.48.3",
+        "@unocss/preset-uno": "^0.48.3",
         "@vitejs/plugin-vue": "^4.0.0",
         "eslint": "^8.31.0",
         "eslint-config-prettier": "^8.6.0",
@@ -29,6 +36,7 @@
         "eslint-plugin-vue": "^9.8.0",
         "prettier": "^2.8.2",
         "typescript": "^4.9.4",
+        "unocss": "^0.48.3",
         "unplugin-auto-import": "^0.12.1",
         "unplugin-vue-components": "^0.22.12",
         "vite": "^4.0.0",

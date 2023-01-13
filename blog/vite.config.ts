@@ -4,11 +4,22 @@ import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import { ArcoResolver } from 'unplugin-vue-components/resolvers'
 import eslintPlugin from 'vite-plugin-eslint'
+import Unocss from 'unocss/vite'
+import { presetUno, presetAttributify, presetIcons } from 'unocss'
 
 // https://vitejs.dev/config/
 export default defineConfig({
     plugins: [
         vue(),
+        Unocss({
+            // 使用Unocss
+            presets: [presetUno(), presetAttributify(), presetIcons()],
+            rules: [],
+            //自定义组合样式
+            shortcuts: {
+                //fuck: ['green', 'font28'],
+            },
+        }),
         eslintPlugin({
             include: ['src/**/*.ts', 'src/**/*.vue', 'src/*.ts', 'src/*.vue'],
         }),
