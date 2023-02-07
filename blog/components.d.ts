@@ -7,9 +7,16 @@ export {}
 
 declare module '@vue/runtime-core' {
     export interface GlobalComponents {
+        AAffix: typeof import('@arco-design/web-vue')['Affix']
         AButton: typeof import('@arco-design/web-vue')['Button']
+        AMenu: typeof import('@arco-design/web-vue')['Menu']
+        AMenuItem: typeof import('@arco-design/web-vue')['MenuItem']
+        App: typeof import('./src/views/home/App.vue')['default']
+        ArticleList: typeof import('./src/components/layout/ArticleListImg.vue')['default']
+        ArticleListImg: typeof import('./src/components/layout/ArticleListImg.vue')['default']
+        ArticleListInfo: typeof import('./src/components/layout/ArticleListInfo.vue')['default']
         ASpace: typeof import('@arco-design/web-vue')['Space']
-        HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
-        Test: typeof import('./src/components/Test.vue')['default']
+        Home: typeof import('./src/views/home/Home.vue')['default']
+        TopBar: typeof import('./src/components/layout/TopBar.vue')['default']
     }
 }
