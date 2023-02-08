@@ -9,6 +9,7 @@
 .info {
     display: flex;
     width: 50%;
+    height: 300px;
     flex-direction: column;
     align-items: center;
     padding: 20px 35px;

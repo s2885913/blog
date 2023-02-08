@@ -7,10 +7,17 @@ import eslintPlugin from 'vite-plugin-eslint'
 import Unocss from 'unocss/vite'
 import { presetUno, presetAttributify } from 'unocss'
 import UnocssIcons from '@unocss/preset-icons'
-
+import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
+import { resolve } from 'path'
 // https://vitejs.dev/config/
 export default defineConfig({
     plugins: [
+        createSvgIconsPlugin({
+            // 配置你存放 svg 图标的目录
+            iconDirs: [resolve(process.cwd(), './src/assets/icons/svg')], //例如：src/images/svg
+            // 定义 symbolId 格式
+            symbolId: 'icon-[dir]-[name]',
+        }),
         vue(),
         Unocss({
             // 使用Unocss

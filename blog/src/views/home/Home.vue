@@ -8,31 +8,46 @@
         </div>
         <div class="content">
             <div class="content-left">
-                <span>
-                    <img src="@/assets/img/head.jpg" alt="" />
-                </span>
-                <h1 style="margin-top: 10px">Quinlan</h1>
-                <div class="left-info">
-                    <div class="info-box">
-                        <span>文章</span>
-                        <span style="margin-top: 10px">11</span>
+                <div class="introduce bg-white">
+                    <span>
+                        <img src="@/assets/img/head.jpg" alt="" />
+                    </span>
+                    <h1 style="margin-top: 10px">Quinlan</h1>
+                    <div class="left-info">
+                        <div class="info-box">
+                            <span>文章</span>
+                            <span style="margin-top: 10px">11</span>
+                        </div>
+                        <div class="info-box">
+                            <span>分类</span>
+                            <span style="margin-top: 10px">12</span>
+                        </div>
+                        <div class="info-box">
+                            <span>标签</span>
+                            <span style="margin-top: 10px">13</span>
+                        </div>
                     </div>
-                    <div class="info-box">
-                        <span>分类</span>
-                        <span style="margin-top: 10px">12</span>
+                    <a-button style="width: 70%; margin-top: 10px; margin-bottom: 10px; background-color: #49b1f5; color: #fff">按钮</a-button>
+                    <div class="official-icon">
+                        <svg-icon icon-class="vite" style="width: 18px; height: 18px"></svg-icon>
                     </div>
                 </div>
-                <a-button shape="round" style="width: 65%; margin-top: 10px; background-color: #39c5bb; color: #fff">按钮</a-button>
             </div>
             <div class="notice bg-white">
                 <i class="i-icon-park-outline-volume-notice text-5 color-gray mr-2"></i>
                 <span>公告</span>
             </div>
             <div class="content-center">
-                <article-list-img></article-list-img>
-                <ArticleListInfo></ArticleListInfo>
+                <div class="content-msg">
+                    <article-list-img></article-list-img>
+                    <ArticleListInfo></ArticleListInfo>
+                </div>
+                <div class="content-msg">
+                    <article-list-img></article-list-img>
+                    <ArticleListInfo></ArticleListInfo>
+                </div>
             </div>
-            <div class="content-right"></div>
+            <div class="content-right bg-white"></div>
         </div>
     </div>
 </template>
@@ -77,21 +92,27 @@
     border-radius: 5px;
 }
 
-.main .content .content-left,
+.main .content .content-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.main .content .content-left .introduce,
 .main .content .content-right {
     width: 290px;
     border-radius: 10px;
     box-shadow: 0 1px 20px -6px rgba(0, 0, 0, 0.5);
 }
 
-.main .content .content-left {
+.main .content .content-left .introduce {
     display: flex;
+    height: auto;
     flex-direction: column;
     align-items: center;
-    background: linear-gradient(-45deg, #eccec5, #a3e9eb, #bdbdf0);
+    /* background: linear-gradient(-45deg, #e8d8b9, #eccec5, #a3e9eb, #bdbdf0, #eec1ea); */
 }
 
-.main .content .content-left > span {
+.main .content .content-left .introduce > span {
     width: 120px;
     height: 120px;
     border-radius: 50%;
@@ -99,32 +120,35 @@
     overflow: hidden;
 }
 
-.main .content .content-left > span > img {
+.main .content .content-left .introduce > span > img {
     width: 100%;
     height: 100%;
     vertical-align: middle;
 }
 
-.main .content .content-left .left-info {
+.main .content .content-left .introduce .left-info {
     display: flex;
-    width: 80%;
+    width: 75%;
     justify-content: space-around;
     align-items: center;
 }
 
-.main .content .content-left .left-info .info-box {
+.main .content .content-left .introduce .left-info .info-box {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+.main .content .content-left .introduce .official-icon {
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+}
+
 .main .content .content-center {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     width: 780px;
-    margin-top: 55px;
-    border-radius: 10px;
-    box-shadow: 0 1px 20px -6px rgba(0, 0, 0, 0.5);
 }
 
 .main .content .notice {
@@ -136,5 +160,14 @@
     border-radius: 10px;
     padding: 0px 10px;
     box-shadow: 0 1px 20px -6px rgba(0, 0, 0, 0.5);
+}
+.main .content .content-center .content-msg {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 55px;
+    border-radius: 10px;
+    box-shadow: 0 1px 20px -6px rgba(0, 0, 0, 0.5);
+    background-color: #fff;
 }
 </style>
