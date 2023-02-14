@@ -28,9 +28,7 @@
                         </div>
                     </div>
                     <a-button style="width: 70%; margin-top: 10px; margin-bottom: 10px; background-color: #49b1f5; color: #fff">按钮</a-button>
-                    <div class="official-icon">
-                        <svg-icon icon-class="vite" style="width: 18px; height: 18px"></svg-icon>
-                    </div>
+                    <div class="official-icon"></div>
                 </div>
             </div>
             <div class="notice bg-white">
