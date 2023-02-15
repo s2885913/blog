@@ -22,7 +22,7 @@
                                 width: '100%',
                                 height: '100%',
                             }"
-                            :auto-play="false"
+                            :auto-play="true"
                             :move-speed="1000"
                             animation-name="fade"
                             show-arrow="hover"
