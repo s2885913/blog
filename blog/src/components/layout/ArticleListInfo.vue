@@ -1,3 +1,11 @@
+<!--
+ * @Author: lzr 1598042226@qq.com
+ * @Date: 2023-02-06 17:29:29
+ * @LastEditors: lzr 1598042226@qq.com
+ * @LastEditTime: 2023-02-15 10:23:25
+ * @FilePath: \blog\src\components\layout\ArticleListInfo.vue
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
 <template>
     <div class="article">
         <a-typography-title :heading="4" ellipsis style="margin-top: 10px">
@@ -6,7 +14,7 @@
         <div class="article-lable">
             <span><svg-icon icon-class="hot" style="width: 16px; height: 16px; margin-bottom: 3px"></svg-icon>81阅读</span>
             <span><svg-icon icon-class="pl" style="width: 16px; height: 16px; margin-bottom: 3px"></svg-icon>4条评论</span>
-            <span><svg-icon icon-class="time" style="width: 16px; height: 16px; margin-bottom: 3px; color: red"></svg-icon>发布于2023-02-08</span>
+            <span><svg-icon icon-class="time" style="width: 15px; height: 15px; margin-bottom: 2px"></svg-icon>发布于2023-02-08</span>
         </div>
         <div class="mian-text">
             <a-typography-paragraph

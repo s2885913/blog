@@ -1,7 +1,7 @@
 <template>
     <div class="main">
         <div class="banner">
-            <img src="@/assets/img/banner.jpg" alt="" />
+            <a-image :src="require('@/assets/img/banner.jpg')" fit="cover" :show-loader="true" width="100%" height="100%"></a-image>
             <div class="banner-title">
                 <h1>123123</h1>
             </div>
