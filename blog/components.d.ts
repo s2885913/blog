@@ -8,12 +8,18 @@ export {}
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     AButton: typeof import('@arco-design/web-vue')['Button']
+    ACarousel: typeof import('@arco-design/web-vue')['Carousel']
+    ACarouselItem: typeof import('@arco-design/web-vue')['CarouselItem']
+    ACol: typeof import('@arco-design/web-vue')['Col']
     ADrawer: typeof import('@arco-design/web-vue')['Drawer']
     AImage: typeof import('@arco-design/web-vue')['Image']
+    AImg: typeof import('@arco-design/web-vue')['Img']
+    AImge: typeof import('@arco-design/web-vue')['Imge']
     AMenu: typeof import('@arco-design/web-vue')['Menu']
     AMenuItem: typeof import('@arco-design/web-vue')['MenuItem']
     ARadio: typeof import('@arco-design/web-vue')['Radio']
     ARadioGroup: typeof import('@arco-design/web-vue')['RadioGroup']
+    ARow: typeof import('@arco-design/web-vue')['Row']
     ArticleListImg: typeof import('./src/components/layout/ArticleListImg.vue')['default']
     ArticleListInfo: typeof import('./src/components/layout/ArticleListInfo.vue')['default']
     ASubMenu: typeof import('@arco-design/web-vue')['SubMenu']

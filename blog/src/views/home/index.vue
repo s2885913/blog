@@ -1,16 +1,57 @@
 <template>
     <div class="main">
         <div class="banner">
-            <a-image :src="require('@/assets/img/banner.jpg')" fit="cover" :show-loader="true" width="100%" height="100%"></a-image>
+            <a-image :src="require('@/assets/img/banner.jpg')" fit="cover" :show-loader="true" :preview="false" width="100%" height="100%"></a-image>
             <div class="banner-title">
                 <h1>123123</h1>
             </div>
         </div>
+        <!-- <a-row justify="space-around">
+            <a-row :span="8" style="background-color: red">1123123123</a-row>
+            <a-row :span="8" style="background-color: pink">123123123</a-row>
+            <a-row :span="8" style="background-color: green">12312312312</a-row>
+        </a-row> -->
+
         <div class="content">
+            <a-row justify="space-around">
+                <a-col flex="290px" style="background-color: red">123</a-col>
+                <a-col flex="780px">
+                    <div class="article-top">
+                        <a-carousel
+                            :style="{
+                                width: '100%',
+                                height: '100%',
+                            }"
+                            :auto-play="false"
+                            :move-speed="1000"
+                            animation-name="fade"
+                            show-arrow="hover"
+                            arrow-class="arrow"
+                            indicator-type="line"
+                            :default-current="1"
+                            @change="handleChange">
+                            <a-carousel-item v-for="image in images" :key="image">
+                                <a-image :src="image" width="100%" height="100%" fit="cover" :show-loader="true" :preview="false"></a-image>
+                            </a-carousel-item>
+                        </a-carousel>
+                    </div>
+                    <div class="article">
+                        <article-list-img></article-list-img>
+                        <ArticleListInfo></ArticleListInfo>
+                    </div>
+                    <div class="article">
+                        <article-list-img></article-list-img>
+                    </div>
+                </a-col>
+                <a-col flex="290px" style="background-color: green">123</a-col>
+            </a-row>
+        </div>
+
+        <!-- <div class="content">
             <div class="content-left">
                 <div class="introduce bg-white">
                     <span>
-                        <img src="@/assets/img/head.jpg" alt="" />
+                        <a-image :src="require('@/assets/img/head.jpg')" fit="scale-down" :show-loader="true" :preview="false" width="100%" height="100%"></a-image>
                     </span>
                     <h1 style="margin-top: 10px">Quinlan</h1>
                     <div class="left-info">
@@ -38,10 +79,14 @@
                     </div>
                 </div>
             </div>
-            <div class="notice bg-white">
-                <svg-icon icon-class="gg" style="width: 20px; height: 20px; margin-right: 5px"></svg-icon>
-                <span>公告</span>
-            </div>
+            <a-row>
+                <a-col :span="24">
+                    <div class="notice bg-white">
+                        <svg-icon icon-class="gg" style="width: 20px; height: 20px; margin-right: 5px"></svg-icon>
+                        <span>公告</span>
+                    </div>
+                </a-col>
+            </a-row>
             <div class="content-center">
                 <div class="content-msg">
                     <article-list-img></article-list-img>
@@ -53,12 +98,25 @@
                 </div>
             </div>
             <div class="content-right bg-white"></div>
-        </div>
+        </div> -->
     </div>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+const handleChange = (value: any) => {
+    console.log(value)
+}
+
+const images = [
+    'https://blog.zwying.com/usr/uploads/sina/63adb5d48cc08.jpg',
+    'https://p1-arco.byteimg.com/tos-cn-i-uwbnlip3yd/6480dbc69be1b5de95010289787d64f1.png~tplv-uwbnlip3yd-webp.webp',
+    'https://p1-arco.byteimg.com/tos-cn-i-uwbnlip3yd/0265a04fddbd77a19602a15d9d55d797.png~tplv-uwbnlip3yd-webp.webp',
+]
+</script>
 <style scoped>
+::deep(.arco-carousel-arrow > div) {
+    background-color: red;
+}
 .main .banner {
     /* position: fixed; */
     position: relative;
@@ -87,15 +145,29 @@
 }
 
 .main .content {
-    display: flex;
+    /* display: flex;
     width: 90%;
     margin: 20px auto;
-    /* flex-wrap: nowrap; */
     flex-direction: row;
     justify-content: space-around;
     height: auto;
-    /* border: 1px solid pink; */
-    border-radius: 5px;
+    border-radius: 5px; */
+    margin-top: 20px;
+}
+
+.content .article,
+.content .article-top {
+    display: flex;
+    height: 280px;
+    border-radius: 10px;
+    background-color: #fff;
+    overflow: hidden;
+    margin-bottom: 40px;
+    box-shadow: 0 1px 20px -6px rgba(0, 0, 0, 0.5);
+}
+
+.content .article-top {
+    position: relative;
 }
 
 .main .content .content-left {
