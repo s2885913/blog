@@ -27,14 +27,19 @@
                             <span style="margin-top: 10px">13</span>
                         </div>
                     </div>
-                    <a-button style="width: 70%; margin-top: 10px; margin-bottom: 10px; background-color: #49b1f5; color: #fff">按钮</a-button>
+                    <a-button style="width: 70%; margin-top: 10px; margin-bottom: 10px; background-color: #49b1f5; color: #fff"
+                        ><svg-icon icon-class="wjx" style="width: 18px; height: 18px"></svg-icon>加入书签</a-button
+                    >
                     <div class="official-icon">
-                        <svg-icon icon-class="vite" style="width: 18px; height: 18px"></svg-icon>
+                        <a href=""><svg-icon icon-class="qq" style="width: 25px; height: 25px"></svg-icon></a>
+                        <a href=""><svg-icon icon-class="github" style="width: 25px; height: 25px"></svg-icon></a>
+                        <a href=""><svg-icon icon-class="gitee" style="width: 25px; height: 25px"></svg-icon></a>
+                        <a href=""><svg-icon icon-class="weibo" style="width: 25px; height: 25px"></svg-icon></a>
                     </div>
                 </div>
             </div>
             <div class="notice bg-white">
-                <i class="i-icon-park-outline-volume-notice text-5 color-gray mr-2"></i>
+                <svg-icon icon-class="gg" style="width: 20px; height: 20px; margin-right: 5px"></svg-icon>
                 <span>公告</span>
             </div>
             <div class="content-center">
@@ -43,8 +48,8 @@
                     <ArticleListInfo></ArticleListInfo>
                 </div>
                 <div class="content-msg">
-                    <article-list-img></article-list-img>
                     <ArticleListInfo></ArticleListInfo>
+                    <article-list-img></article-list-img>
                 </div>
             </div>
             <div class="content-right bg-white"></div>
@@ -85,9 +90,10 @@
     display: flex;
     width: 90%;
     margin: 20px auto;
-    flex-wrap: nowrap;
+    /* flex-wrap: nowrap; */
+    flex-direction: row;
     justify-content: space-around;
-    height: 300px;
+    height: auto;
     /* border: 1px solid pink; */
     border-radius: 5px;
 }
@@ -100,6 +106,7 @@
 .main .content .content-left .introduce,
 .main .content .content-right {
     width: 290px;
+    margin-top: 60px;
     border-radius: 10px;
     box-shadow: 0 1px 20px -6px rgba(0, 0, 0, 0.5);
 }
@@ -143,12 +150,14 @@
     display: flex;
     justify-content: space-around;
     width: 70%;
+    margin-bottom: 10px;
 }
 
 .main .content .content-center {
     display: flex;
     flex-direction: column;
     width: 780px;
+    height: auto;
 }
 
 .main .content .notice {
@@ -163,11 +172,17 @@
 }
 .main .content .content-center .content-msg {
     width: 100%;
+    height: 300px;
     display: flex;
     justify-content: space-around;
-    margin-top: 55px;
+    margin-top: 40px;
+    overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 1px 20px -6px rgba(0, 0, 0, 0.5);
     background-color: #fff;
+}
+
+.main .content .content-center .content-msg:first-child {
+    margin-top: 60px;
 }
 </style>

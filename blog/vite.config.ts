@@ -11,6 +11,10 @@ import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 import { resolve } from 'path'
 // https://vitejs.dev/config/
 export default defineConfig({
+    server: {
+        host: '0.0.0.0',
+        port: 5173,
+    },
     plugins: [
         createSvgIconsPlugin({
             // 配置你存放 svg 图标的目录
@@ -42,8 +46,9 @@ export default defineConfig({
             include: ['src/**/*.ts', 'src/**/*.vue', 'src/*.ts', 'src/*.vue'],
         }),
         AutoImport({
+            dirs: ['./src/utils'],
             resolvers: [ArcoResolver()],
-            imports: ['vue', 'vue-router', 'pinia'],
+            imports: ['vue', 'vue-router', 'pinia', 'vue-i18n', '@vueuse/head', '@vueuse/core'],
             eslintrc: {
                 enabled: false, // 默认false, true启用。生成一次就可以，避免每次工程启动都生成
             },
@@ -61,7 +66,7 @@ export default defineConfig({
     resolve: {
         // 配置路径别名
         alias: {
-            '@': '/src',
+            '@': resolve(__dirname, 'src'),
         },
     },
 })
