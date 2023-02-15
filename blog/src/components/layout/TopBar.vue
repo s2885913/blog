@@ -1,19 +1,4 @@
 <template>
-    <!-- <div class="topBar">
-        <a-menu mode="horizontal" :default-selected-keys="['1']" style="background-color: transparent" breakpoint="md">
-            <a-menu-item key="0" :style="{ padding: 0, marginRight: '38px', height: '60px' }" disabled>
-                <h2>Quinlan</h2>
-            </a-menu-item>
-            <a-menu-item key="1"><svg-icon icon-class="home" style="width: 20px; height: 20px; margin-bottom: 2px"></svg-icon>首页</a-menu-item>
-            <a-menu-item key="2"><svg-icon icon-class="find" style="width: 24px; height: 24px; margin-bottom: 2px"></svg-icon>发现</a-menu-item>
-            <a-menu-item key="3"><svg-icon icon-class="play" style="width: 15px; height: 15px; margin-bottom: 2px; margin-right: 3px"></svg-icon>娱乐</a-menu-item>
-            <a-menu-item key="4"><svg-icon icon-class="link" style="width: 22px; height: 22px; margin-bottom: 2px"></svg-icon>友联</a-menu-item>
-            <a-menu-item key="5"><svg-icon icon-class="about" style="width: 20px; height: 20px; margin-top: 0px"></svg-icon>关于</a-menu-item>
-            <a-menu-item key="6"><svg-icon icon-class="liuyan" style="width: 22px; height: 22px; margin-bottom: 2px"></svg-icon>留言</a-menu-item>
-            <a-menu-item key="7"><svg-icon icon-class="search" style="width: 18px; height: 18px; margin-top: 0px; margin-right: 3px"></svg-icon>搜索</a-menu-item>
-            <a-menu-item key=""><svg-icon icon-class="login" style="width: 20px; height: 20px; margin-bottom: 2px"></svg-icon>登录</a-menu-item>
-        </a-menu>
-    </div> -->
     <div class="menu">
         <!-- <a-drawer :width="250" :visible="_this.drawerVisible" unmount-on-close placement="left" :mask="true" :closable="false" :esc-to-close="true" :header="false" :footer="false">
             <div class="left-bar">
@@ -37,9 +22,7 @@
             </div>
         </a-drawer> -->
         <a :class="logoClass" href=""><h2>Quinlan</h2></a>
-        <div class="left-icon" href=""><svg-icon icon-class="list" style="width: 24px; height: 24px; color: #fff"></svg-icon></div>
         <a-menu
-            class="menuClass"
             :style="{ width: 'auto', height: '60px', marginLeft: barClass }"
             :default-open-keys="['0']"
             :default-selected-keys="['0_2']"
@@ -104,13 +87,6 @@ const onCollapse = (a: boolean) => {
     left: 20px;
 }
 
-.left-icon {
-    position: absolute;
-    color: #fff;
-    top: 15px;
-    left: 20px;
-}
-
 .center-logo {
     position: absolute;
     color: #fff;
@@ -150,9 +126,5 @@ const onCollapse = (a: boolean) => {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.menuClass {
-    display: none;
 }
 </style>
