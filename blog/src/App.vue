@@ -6,6 +6,8 @@
         <TopBar></TopBar>
         <!-- content -->
         <Home></Home>
+        <!-- footer -->
+        <Footer></Footer>
     </div>
 </template>
 <style scoped></style>
