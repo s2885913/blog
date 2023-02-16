@@ -29,7 +29,7 @@ declare module '@vue/runtime-core' {
     ASubMenuItem: typeof import('@arco-design/web-vue')['SubMenuItem']
     ATypographyParagraph: typeof import('@arco-design/web-vue')['TypographyParagraph']
     ATypographyTitle: typeof import('@arco-design/web-vue')['TypographyTitle']
-    Footer: typeof import('./src/components/layout/footer.vue')['default']
+    Footer: typeof import('./src/components/layout/Footer.vue')['default']
     Home: typeof import('./src/views/home/index.vue')['default']
     index: typeof import('./src/views/home/index.vue')['default']
     SvgIcon: typeof import('./src/components/icons/SvgIcon.vue')['default']
