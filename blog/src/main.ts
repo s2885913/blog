@@ -6,6 +6,7 @@ import App from './App.vue'
 import '@arco-design/web-vue/dist/arco.css'
 import './style.css'
 import 'uno.css'
+import 'animate.css'
 import './assets/font/font.css'
 //在main.ts中
 import 'virtual:svg-icons-register'

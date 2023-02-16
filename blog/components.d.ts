@@ -7,6 +7,8 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    AAffix: typeof import('@arco-design/web-vue')['Affix']
+    AAvatar: typeof import('@arco-design/web-vue')['Avatar']
     AButton: typeof import('@arco-design/web-vue')['Button']
     ACarousel: typeof import('@arco-design/web-vue')['Carousel']
     ACarouselItem: typeof import('@arco-design/web-vue')['CarouselItem']
@@ -23,8 +25,11 @@ declare module '@vue/runtime-core' {
     ArticleListImg: typeof import('./src/components/layout/ArticleListImg.vue')['default']
     ArticleListInfo: typeof import('./src/components/layout/ArticleListInfo.vue')['default']
     ASubMenu: typeof import('@arco-design/web-vue')['SubMenu']
+    'ASubMenu-': typeof import('@arco-design/web-vue')['SubMenu-']
+    ASubMenuItem: typeof import('@arco-design/web-vue')['SubMenuItem']
     ATypographyParagraph: typeof import('@arco-design/web-vue')['TypographyParagraph']
     ATypographyTitle: typeof import('@arco-design/web-vue')['TypographyTitle']
+    Footer: typeof import('./src/components/layout/footer.vue')['default']
     Home: typeof import('./src/views/home/index.vue')['default']
     index: typeof import('./src/views/home/index.vue')['default']
     SvgIcon: typeof import('./src/components/icons/SvgIcon.vue')['default']

@@ -1,9 +1,21 @@
 <template>
     <div class="main">
         <div class="banner">
-            <a-image :src="require('@/assets/img/banner.jpg')" fit="cover" :show-loader="true" :preview="false" width="100%" height="100%"></a-image>
+            <a-image :src="require('@/assets/img/banner.jpg')" fit="cover" :preview="false" width="100%" height="100%"></a-image>
             <div class="banner-title">
-                <h1>123123</h1>
+                <a-typography-title class="animate__animated animate__fadeInDown" :heading="1"> 山外青山楼外楼敖德萨大苏打速度</a-typography-title>
+
+                <a-row justify="center">
+                    <h2>
+                        <!-- 使用span显示文字, data-text为Json格式的数组 -->
+                        <span id="text" data-text='["山外青山，楼外楼。"]'></span>
+                        <!-- 闪烁的光标 -->
+                        <span class="mark"></span>
+                    </h2>
+                </a-row>
+            </div>
+            <div class="arrow animate__animated animate__fadeInDown animate__infinite animate__slow">
+                <span><svg-icon icon-class="down" style="width: 40px; height: 40px; transform: rotateX(180deg); cursor: pointer"></svg-icon></span>
             </div>
         </div>
         <!-- <a-row justify="space-around">
@@ -25,13 +37,25 @@
                             :auto-play="true"
                             :move-speed="1000"
                             animation-name="fade"
-                            show-arrow="hover"
                             arrow-class="arrow"
                             indicator-type="line"
                             :default-current="1"
                             @change="handleChange">
                             <a-carousel-item v-for="image in images" :key="image">
-                                <a-image :src="image" width="100%" height="100%" fit="cover" :show-loader="true" :preview="false"></a-image>
+                                <a-image :src="image" width="100%" height="100%" fit="cover" :show-loader="true" :preview="false" style="filter: brightness(0.7)"></a-image>
+                                <div class="top-msg">
+                                    <div class="title">
+                                        <a-row> <a-typography-title :heading="4" ellipsis style="margin-top: -5px; color: #fff"> MySQL实现了SQL标准中的四个隔离 </a-typography-title></a-row>
+                                    </div>
+                                    <div class="title-icon">
+                                        <a-row justify="space-between" align="center">
+                                            <span><svg-icon icon-class="zhiding" style="width: 16px; height: 16px; margin-bottom: 3px; color: gray"></svg-icon>&nbsp;置顶推荐</span>
+                                            <span><svg-icon icon-class="hot" style="width: 16px; height: 16px; margin-bottom: 3px"></svg-icon>&nbsp;81阅读</span>
+                                            <span><svg-icon icon-class="pl" style="width: 16px; height: 16px; margin-bottom: 3px"></svg-icon>&nbsp;4条评论</span>
+                                            <span><svg-icon icon-class="time" style="width: 13px; height: 13px; margin-bottom: 2px"></svg-icon>&nbsp;发布于2023-02-08</span>
+                                        </a-row>
+                                    </div>
+                                </div>
                             </a-carousel-item>
                         </a-carousel>
                     </div>
@@ -40,6 +64,7 @@
                         <ArticleListInfo></ArticleListInfo>
                     </div>
                     <div class="article">
+                        <ArticleListInfo></ArticleListInfo>
                         <article-list-img></article-list-img>
                     </div>
                 </a-col>
@@ -103,17 +128,22 @@
 </template>
 
 <script lang="ts" setup>
+import { type } from '@/utils/typing'
 const handleChange = (value: any) => {
     console.log(value)
 }
 
 const images = [
     'https://blog.zwying.com/usr/uploads/sina/63adb5d48cc08.jpg',
-    'https://p1-arco.byteimg.com/tos-cn-i-uwbnlip3yd/6480dbc69be1b5de95010289787d64f1.png~tplv-uwbnlip3yd-webp.webp',
-    'https://p1-arco.byteimg.com/tos-cn-i-uwbnlip3yd/0265a04fddbd77a19602a15d9d55d797.png~tplv-uwbnlip3yd-webp.webp',
+    'https://blog.zwying.com/usr/uploads/sina/63adb5d26977a.jpg',
+    'https://blog.zwying.com/usr/uploads/sina/63adb5d11dbcc.jpg',
 ]
+
+onMounted(() => {
+    type()
+})
 </script>
-<style scoped>
+<style scoped less>
 .main .banner {
     /* position: fixed; */
     position: relative;
@@ -163,101 +193,61 @@ const images = [
     box-shadow: 0 1px 20px -6px rgba(0, 0, 0, 0.5);
 }
 
+.content .article {
+    transition: all 0.3s ease;
+    animation: hideToShow 1s ease-in-out;
+}
+
+.content .article:hover {
+    box-shadow: 0 5px 10px 5px rgba(110, 110, 110, 0.4);
+}
+
 .content .article-top {
     position: relative;
 }
 
-.content .article-top .top-icon {
-    position: relative;
-    left: 0;
-    top: 0;
-}
-
-.main .content .content-left {
-    display: flex;
-    flex-direction: column;
-}
-
-.main .content .content-left .introduce,
-.main .content .content-right {
-    width: 290px;
-    margin-top: 60px;
-    border-radius: 10px;
-    box-shadow: 0 1px 20px -6px rgba(0, 0, 0, 0.5);
-}
-
-.main .content .content-left .introduce {
-    display: flex;
-    height: auto;
-    flex-direction: column;
-    align-items: center;
-    /* background: linear-gradient(-45deg, #e8d8b9, #eccec5, #a3e9eb, #bdbdf0, #eec1ea); */
-}
-
-.main .content .content-left .introduce > span {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
+.content .article-top .top-msg {
+    position: absolute;
+    width: 50%;
+    left: 50%;
+    top: 40%;
     margin-top: 20px;
     overflow: hidden;
+    transform: translate(-50%, -50%);
 }
 
-.main .content .content-left .introduce > span > img {
-    width: 100%;
-    height: 100%;
-    vertical-align: middle;
+.content .article-top .top-msg .title-icon {
+    color: #fff;
+    margin-top: 20px;
+}
+h2 {
+    color: #f1f2f6;
+    font-size: 22px;
+    font-weight: 200;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 10px;
 }
 
-.main .content .content-left .introduce .left-info {
-    display: flex;
-    width: 75%;
-    justify-content: space-around;
-    align-items: center;
+span.mark {
+    border-right: 2px solid white;
+    animation: blink 0.6s step-end infinite;
 }
 
-.main .content .content-left .introduce .left-info .info-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+@keyframes blink {
+    from,
+    to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: white;
+    }
 }
 
-.main .content .content-left .introduce .official-icon {
-    display: flex;
-    justify-content: space-around;
-    width: 70%;
-    margin-bottom: 10px;
-}
-
-.main .content .content-center {
-    display: flex;
-    flex-direction: column;
-    width: 780px;
-    height: auto;
-}
-
-.main .content .notice {
+.banner .arrow {
     position: absolute;
-    display: flex;
-    align-items: center;
-    width: 780px;
-    height: 40px;
-    border-radius: 10px;
-    padding: 0px 10px;
-    box-shadow: 0 1px 20px -6px rgba(0, 0, 0, 0.5);
-}
-.main .content .content-center .content-msg {
-    width: 100%;
-    height: 300px;
-    display: flex;
-    justify-content: space-around;
-    margin-top: 40px;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 1px 20px -6px rgba(0, 0, 0, 0.5);
-    background-color: #fff;
-}
-
-.main .content .content-center .content-msg:first-child {
-    margin-top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 50px;
 }
 </style>

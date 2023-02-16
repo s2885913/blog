@@ -17,6 +17,18 @@
             "@/*": ["src/*"]
         }
     },
-    "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "./components.d.ts", "src/**/*.d.ts", "./*.d.ts", "./auto-imports.d.ts", "src/assets/icons/index.js"],
+    "include": [
+        "src/**/*.ts",
+        "src/**/*.d.ts",
+        "src/**/*.tsx",
+        "src/**/*.vue",
+        "./components.d.ts",
+        "src/**/*.d.ts",
+        "./*.d.ts",
+        "./auto-imports.d.ts",
+        "src/assets/icons/index.js",
+        "src/utils/animation.js",
+        "src/utils/animation.js"
+    ],
     "references": [{ "path": "./tsconfig.node.json" }]
 }
