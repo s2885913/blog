@@ -114,9 +114,6 @@ const images = [
 ]
 </script>
 <style scoped>
-::deep(.arco-carousel-arrow > div) {
-    background-color: red;
-}
 .main .banner {
     /* position: fixed; */
     position: relative;
@@ -168,6 +165,12 @@ const images = [
 
 .content .article-top {
     position: relative;
+}
+
+.content .article-top .top-icon {
+    position: relative;
+    left: 0;
+    top: 0;
 }
 
 .main .content .content-left {
