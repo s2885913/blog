@@ -4,7 +4,6 @@
             <a-image :src="require('@/assets/img/banner.jpg')" fit="cover" :preview="false" width="100%" height="100%"></a-image>
             <div class="banner-title">
                 <a-typography-title class="animate__animated animate__fadeInDown" :heading="1"> 山外青山楼外楼敖德萨大苏打速度</a-typography-title>
-
                 <a-row justify="center">
                     <h2>
                         <!-- 使用span显示文字, data-text为Json格式的数组 -->
@@ -14,7 +13,8 @@
                     </h2>
                 </a-row>
             </div>
-            <div class="arrow animate__animated animate__fadeInDown animate__infinite animate__slow">
+
+            <div class="arrow animate__animated animate__fadeInDown animate__infinite animate__slow" @click="scroolTop">
                 <span><svg-icon icon-class="down" style="width: 40px; height: 40px; transform: rotateX(180deg); cursor: pointer"></svg-icon></span>
             </div>
         </div>
@@ -39,8 +39,7 @@
                             animation-name="fade"
                             arrow-class="arrow"
                             indicator-type="line"
-                            :default-current="1"
-                            @change="handleChange">
+                            :default-current="1">
                             <a-carousel-item v-for="image in images" :key="image">
                                 <a-image :src="image" width="100%" height="100%" fit="cover" :show-loader="true" :preview="false" style="filter: brightness(0.7)"></a-image>
                                 <div class="top-msg">
@@ -49,7 +48,9 @@
                                     </div>
                                     <div class="title-icon">
                                         <a-row justify="space-between" align="center">
-                                            <span><svg-icon icon-class="zhiding" style="width: 16px; height: 16px; margin-bottom: 3px; color: gray"></svg-icon>&nbsp;置顶推荐</span>
+                                            <span style="color: #f7ce68"
+                                                ><svg-icon icon-class="zhiding" style="width: 16px; height: 16px; margin-bottom: 3px; color: gray"></svg-icon>&nbsp;置顶推荐</span
+                                            >
                                             <span><svg-icon icon-class="hot" style="width: 16px; height: 16px; margin-bottom: 3px"></svg-icon>&nbsp;81阅读</span>
                                             <span><svg-icon icon-class="pl" style="width: 16px; height: 16px; margin-bottom: 3px"></svg-icon>&nbsp;4条评论</span>
                                             <span><svg-icon icon-class="time" style="width: 13px; height: 13px; margin-bottom: 2px"></svg-icon>&nbsp;发布于2023-02-08</span>
@@ -129,15 +130,22 @@
 
 <script lang="ts" setup>
 import { type } from '@/utils/typing'
-const handleChange = (value: any) => {
-    console.log(value)
-}
 
 const images = [
     'https://blog.zwying.com/usr/uploads/sina/63adb5d48cc08.jpg',
     'https://blog.zwying.com/usr/uploads/sina/63adb5d26977a.jpg',
     'https://blog.zwying.com/usr/uploads/sina/63adb5d11dbcc.jpg',
 ]
+
+//箭头向下滚动页面
+const scroolTop = () => {
+    const pageId: any = document.querySelector('.content')
+
+    window.scrollTo({
+        top: pageId.offsetTop,
+        behavior: 'smooth',
+    })
+}
 
 onMounted(() => {
     type()
@@ -179,7 +187,7 @@ onMounted(() => {
     justify-content: space-around;
     height: auto;
     border-radius: 5px; */
-    margin-top: 20px;
+    padding-top: 40px;
 }
 
 .content .article,

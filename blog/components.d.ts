@@ -8,7 +8,10 @@ export {}
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     AAffix: typeof import('@arco-design/web-vue')['Affix']
+    AAnchor: typeof import('@arco-design/web-vue')['Anchor']
+    AAnchorLink: typeof import('@arco-design/web-vue')['AnchorLink']
     AAvatar: typeof import('@arco-design/web-vue')['Avatar']
+    ABackTop: typeof import('@arco-design/web-vue')['BackTop']
     AButton: typeof import('@arco-design/web-vue')['Button']
     ACarousel: typeof import('@arco-design/web-vue')['Carousel']
     ACarouselItem: typeof import('@arco-design/web-vue')['CarouselItem']
