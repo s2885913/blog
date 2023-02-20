@@ -75,7 +75,7 @@ a {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    font-size: 17px;
+    font-size: 16px;
 }
 
 .arco-menu-title,
@@ -99,7 +99,7 @@ body {
     /* background-color: #FFF; */
     font-family: "阿里妈妈东方大楷 Regular" !important;
     /* background: linear-gradient(90deg, rgba(247, 149, 51, .1), rgba(243, 112, 85, .1) 15%, rgba(239, 78, 123, .1) 30%, rgba(161, 102, 171, .1) 44%, rgba(80, 115, 184, .1) 58%, rgba(16, 152, 173, .1) 72%, rgba(7, 179, 155, .1) 86%, rgba(109, 186, 130, .1)) */
-    /* background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%); */
+    background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
 }
 
 

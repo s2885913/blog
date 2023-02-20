@@ -197,7 +197,6 @@ onMounted(() => {
     width: 90%;
     margin: 0 auto;
     padding-top: 40px;
-    background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
 }
 
 .content .article,
