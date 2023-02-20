@@ -4,8 +4,8 @@
 
         <div class="menu-right">
             <a-menu :style="{ height: '60px' }" :default-open-keys="['0']" :default-selected-keys="['0_2']" mode="horizontal">
-                <a-menu-item key="0"><svg-icon icon-class="home" style="width: 20px; height: 20px; margin-bottom: 4px"></svg-icon>首页</a-menu-item>
-                <a-menu-item key="1"><svg-icon icon-class="fenlei" style="width: 22px; height: 22px; margin-bottom: 3px"></svg-icon>分类</a-menu-item>
+                <a-menu-item key="0"><svg-icon icon-class="home" style="width: 20px; height: 20px; margin-bottom: 4px"></svg-icon><router-link to="/">首页</router-link></a-menu-item>
+                <a-menu-item key="1"><svg-icon icon-class="fenlei" style="width: 22px; height: 22px; margin-bottom: 3px"></svg-icon><router-link to="classification">分类</router-link></a-menu-item>
                 <a-menu-item key="2"><svg-icon icon-class="xiangce" style="width: 20px; height: 20px; margin-bottom: 4px; margin-right: 1px"></svg-icon>相册</a-menu-item>
                 <a-menu-item key="3"><svg-icon icon-class="liuyan" style="width: 24px; height: 24px; margin-bottom: 2px"></svg-icon>留言</a-menu-item>
                 <a-menu-item key="4"><svg-icon icon-class="link" style="width: 22px; height: 22px; margin-bottom: 3px"></svg-icon>友联</a-menu-item>

@@ -1,5 +1,5 @@
 <template>
-    <TopBar></TopBar>
+    <!-- <TopBar></TopBar> -->
     <div class="main">
         <div class="banner">
             <a-image :src="require('@/assets/img/banner.jpg')" fit="cover" :preview="false" width="100%" height="100%"></a-image>
@@ -132,7 +132,6 @@
                 </a-col>
             </a-row>
         </div>
-        <router-link to="/user">123123213</router-link>
     </div>
 </template>
 
