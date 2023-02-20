@@ -18,7 +18,8 @@
         "lodash": "^4.17.21",
         "pinia": "^2.0.28",
         "svg-sprite-loader": "^6.0.11",
-        "vue": "^3.2.45"
+        "vue": "^3.2.45",
+        "vue-router": "^4.1.6"
     },
     "devDependencies": {
         "@arco-design/web-vue": "^2.42.1",

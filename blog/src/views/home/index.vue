@@ -1,9 +1,10 @@
 <template>
+    <TopBar></TopBar>
     <div class="main">
         <div class="banner">
             <a-image :src="require('@/assets/img/banner.jpg')" fit="cover" :preview="false" width="100%" height="100%"></a-image>
             <div class="banner-title">
-                <a-typography-title class="animate__animated animate__fadeInDown" :heading="1"> 山外青山楼外楼敖德萨大苏打速度</a-typography-title>
+                <a-typography-title class="animate__animated animate__fadeInDown" :heading="1"> 山外青山楼外楼,西湖歌舞几时休？</a-typography-title>
                 <a-row justify="center">
                     <h2>
                         <!-- 使用span显示文字, data-text为Json格式的数组 -->
@@ -18,16 +19,76 @@
                 <span><svg-icon icon-class="down" style="width: 40px; height: 40px; transform: rotateX(180deg); cursor: pointer"></svg-icon></span>
             </div>
         </div>
-        <!-- <a-row justify="space-around">
-            <a-row :span="8" style="background-color: red">1123123123</a-row>
-            <a-row :span="8" style="background-color: pink">123123123</a-row>
-            <a-row :span="8" style="background-color: green">12312312312</a-row>
-        </a-row> -->
 
         <div class="content">
-            <a-row justify="space-around">
-                <a-col flex="290px" style="background-color: red">123</a-col>
+            <a-row style="display: flex; justify-content: space-evenly">
+                <a-col flex="290px" style="padding-left: 40px">
+                    <div class="content-left">
+                        <span>
+                            <a-image :src="require('@/assets/img/head.jpg')" fit="cover" :preview="false" width="100%" height="100%"></a-image>
+                        </span>
+                        <div class="rnname">Quinlan</div>
+                        <div class="left-info">
+                            <a href="">
+                                <div class="info-box">
+                                    <span>文章</span>
+                                    <span style="margin-top: 10px">11</span>
+                                </div>
+                            </a>
+                            <a href="">
+                                <div class="info-box">
+                                    <span>分类</span>
+                                    <span style="margin-top: 10px">12</span>
+                                </div>
+                            </a>
+                            <a href="">
+                                <div class="info-box">
+                                    <span>标签</span>
+                                    <span style="margin-top: 10px">13</span>
+                                </div>
+                            </a>
+                        </div>
+                        <a-button><svg-icon icon-class="wjx" style="width: 18px; height: 18px"></svg-icon>加入书签</a-button>
+                    </div>
+                    <div class="content-left">
+                        <span>
+                            <a-image :src="require('@/assets/img/head.jpg')" fit="cover" :preview="false" width="100%" height="100%"></a-image>
+                        </span>
+                        <div class="rnname">Quinlan</div>
+                        <div class="left-info">
+                            <a href="">
+                                <div class="info-box">
+                                    <span>文章</span>
+                                    <span style="margin-top: 10px">11</span>
+                                </div>
+                            </a>
+                            <a href="">
+                                <div class="info-box">
+                                    <span>分类</span>
+                                    <span style="margin-top: 10px">12</span>
+                                </div>
+                            </a>
+                            <a href="">
+                                <div class="info-box">
+                                    <span>标签</span>
+                                    <span style="margin-top: 10px">13</span>
+                                </div>
+                            </a>
+                        </div>
+                        <a-button style="width: 70%; margin-top: 10px; margin-bottom: 10px; background-color: #49b1f5; color: #fff; border-radius: 1rem; height: 35px; margin-bottom: 20px"
+                            ><svg-icon icon-class="wjx" style="width: 18px; height: 18px"></svg-icon>加入书签</a-button
+                        >
+                    </div>
+                </a-col>
                 <a-col flex="780px">
+                    <div class="notice">
+                        <a-row
+                            ><div class="notice-box">
+                                <span><svg-icon icon-class="tongzhi" style="width: 20px; height: 20px; margin-right: 5px"></svg-icon></span>
+                                <span>公告公告公告公告公告公告公告公告公告公告公告公告公告公告公告公告公告公告</span>
+                            </div></a-row
+                        >
+                    </div>
                     <div class="article-top">
                         <a-carousel
                             :style="{
@@ -69,62 +130,9 @@
                         <article-list-img></article-list-img>
                     </div>
                 </a-col>
-                <a-col flex="290px" style="background-color: green">123</a-col>
             </a-row>
         </div>
-
-        <!-- <div class="content">
-            <div class="content-left">
-                <div class="introduce bg-white">
-                    <span>
-                        <a-image :src="require('@/assets/img/head.jpg')" fit="scale-down" :show-loader="true" :preview="false" width="100%" height="100%"></a-image>
-                    </span>
-                    <h1 style="margin-top: 10px">Quinlan</h1>
-                    <div class="left-info">
-                        <div class="info-box">
-                            <span>文章</span>
-                            <span style="margin-top: 10px">11</span>
-                        </div>
-                        <div class="info-box">
-                            <span>分类</span>
-                            <span style="margin-top: 10px">12</span>
-                        </div>
-                        <div class="info-box">
-                            <span>标签</span>
-                            <span style="margin-top: 10px">13</span>
-                        </div>
-                    </div>
-                    <a-button style="width: 70%; margin-top: 10px; margin-bottom: 10px; background-color: #49b1f5; color: #fff"
-                        ><svg-icon icon-class="wjx" style="width: 18px; height: 18px"></svg-icon>加入书签</a-button
-                    >
-                    <div class="official-icon">
-                        <a href=""><svg-icon icon-class="qq" style="width: 25px; height: 25px"></svg-icon></a>
-                        <a href=""><svg-icon icon-class="github" style="width: 25px; height: 25px"></svg-icon></a>
-                        <a href=""><svg-icon icon-class="gitee" style="width: 25px; height: 25px"></svg-icon></a>
-                        <a href=""><svg-icon icon-class="weibo" style="width: 25px; height: 25px"></svg-icon></a>
-                    </div>
-                </div>
-            </div>
-            <a-row>
-                <a-col :span="24">
-                    <div class="notice bg-white">
-                        <svg-icon icon-class="gg" style="width: 20px; height: 20px; margin-right: 5px"></svg-icon>
-                        <span>公告</span>
-                    </div>
-                </a-col>
-            </a-row>
-            <div class="content-center">
-                <div class="content-msg">
-                    <article-list-img></article-list-img>
-                    <ArticleListInfo></ArticleListInfo>
-                </div>
-                <div class="content-msg">
-                    <ArticleListInfo></ArticleListInfo>
-                    <article-list-img></article-list-img>
-                </div>
-            </div>
-            <div class="content-right bg-white"></div>
-        </div> -->
+        <router-link to="/user">123123213</router-link>
     </div>
 </template>
 
@@ -187,6 +195,8 @@ onMounted(() => {
     justify-content: space-around;
     height: auto;
     border-radius: 5px; */
+    width: 90%;
+    margin: 0 auto;
     padding-top: 40px;
 }
 
@@ -198,12 +208,16 @@ onMounted(() => {
     background-color: #fff;
     overflow: hidden;
     margin-bottom: 40px;
+    transition: all 0.3s ease;
     box-shadow: 0 1px 20px -6px rgba(0, 0, 0, 0.5);
+}
+
+.content .article-top:hover {
+    box-shadow: 0 5px 10px 5px rgba(110, 110, 110, 0.4);
 }
 
 .content .article {
     transition: all 0.3s ease;
-    animation: hideToShow 1s ease-in-out;
 }
 
 .content .article:hover {
@@ -257,5 +271,98 @@ span.mark {
     left: 50%;
     transform: translateX(-50%);
     bottom: 50px;
+}
+
+.content-left {
+    display: flex;
+    box-shadow: 0 1px 20px -6px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+    transition: all 0.3s ease;
+    /* background: linear-gradient(-45deg, #eccec5, #a3e9eb, #bdbdf0); */
+}
+
+.content-left:hover {
+    box-shadow: 0 5px 10px 5px rgba(110, 110, 110, 0.4);
+}
+
+.content-left > span {
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+
+.content-left .rnname {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 20px 0;
+}
+
+.content-left .left-info {
+    display: flex;
+    width: 70%;
+    font-size: 16px;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.content-left .left-info .info-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.arco-btn-size-medium {
+    width: 70%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #39c5bb !important;
+    color: #fff !important;
+    border-radius: 1rem;
+    height: 35px;
+    margin-bottom: 20px;
+    z-index: 1;
+}
+
+.arco-btn-size-medium::before {
+    background: rgb(20, 138, 235);
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    bottom: -1px;
+    left: -1px;
+    content: '';
+    transform: scaleX(0);
+    transform-origin: 0;
+    transition: transform 0.5s ease-out;
+    transition-timing-function: cubic-bezier(0.45, 1.64, 0.47, 0.66);
+    border-radius: 1rem;
+    z-index: -1;
+}
+
+.arco-btn-size-medium:hover::before {
+    transform: scaleX(1);
+}
+
+.content .notice-box {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 20px -6px rgba(0, 0, 0, 0.5);
+}
+.content .notice-box span:first-child {
+    padding-left: 5px;
+}
+
+.content .notice-box span {
+    font-size: 16px;
 }
 </style>

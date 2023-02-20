@@ -82,8 +82,4 @@
     flex-direction: column;
     align-items: center;
 }
-
-.arco-menu-horizontal .arco-menu-item:not(:first-child),
-.arco-menu-horizontal .arco-menu-pop:not(:first-child) {
-}
 </style>

@@ -38,7 +38,10 @@ declare module '@vue/runtime-core' {
     Footer: typeof import('./src/components/layout/Footer.vue')['default']
     Home: typeof import('./src/views/home/index.vue')['default']
     index: typeof import('./src/views/home/index.vue')['default']
+    RouterLink: typeof import('vue-router')['RouterLink']
+    RouterView: typeof import('vue-router')['RouterView']
     SvgIcon: typeof import('./src/components/icons/SvgIcon.vue')['default']
     TopBar: typeof import('./src/components/layout/TopBar.vue')['default']
+    User: typeof import('./src/views/user/index.vue')['default']
   }
 }
