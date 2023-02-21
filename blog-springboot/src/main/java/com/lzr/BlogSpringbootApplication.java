@@ -1,4 +1,4 @@
-package com.lzr.blogspringboot;
+package com.lzr;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
