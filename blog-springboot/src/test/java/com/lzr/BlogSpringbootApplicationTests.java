@@ -1,4 +1,4 @@
-package com.lzr.blogspringboot;
+package com.lzr;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
