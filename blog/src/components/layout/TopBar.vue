@@ -4,19 +4,43 @@
 
         <div class="menu-right">
             <a-menu :style="{ height: '60px' }" :default-open-keys="['0']" :default-selected-keys="['0_2']" mode="horizontal">
-                <a-menu-item key="0"><svg-icon icon-class="home" style="width: 20px; height: 20px; margin-bottom: 4px"></svg-icon><router-link to="/">首页</router-link></a-menu-item>
-                <a-menu-item key="1"><svg-icon icon-class="fenlei" style="width: 22px; height: 22px; margin-bottom: 3px"></svg-icon><router-link to="classification">分类</router-link></a-menu-item>
-                <a-menu-item key="2"><svg-icon icon-class="xiangce" style="width: 20px; height: 20px; margin-bottom: 4px; margin-right: 1px"></svg-icon>相册</a-menu-item>
-                <a-menu-item key="3"><svg-icon icon-class="liuyan" style="width: 24px; height: 24px; margin-bottom: 2px"></svg-icon>留言</a-menu-item>
-                <a-menu-item key="4"><svg-icon icon-class="link" style="width: 22px; height: 22px; margin-bottom: 3px"></svg-icon>友联</a-menu-item>
-                <a-menu-item key="5"><svg-icon icon-class="about" style="width: 22px; height: 22px; margin-bottom: 2px"></svg-icon>关于</a-menu-item>
-                <a-menu-item key="6"><svg-icon icon-class="search" style="width: 18px; height: 18px; margin-top: -1px; margin-right: 3px"></svg-icon>搜索</a-menu-item>
+                <a-menu-item key="0">
+                    <svg-icon icon-class="home" style="width: 20px; height: 20px; margin-bottom: 4px"></svg-icon>
+                    <router-link to="/">首页</router-link>
+                </a-menu-item>
+                <a-menu-item key="1">
+                    <svg-icon icon-class="fenlei" style="width: 22px; height: 22px; margin-bottom: 3px"></svg-icon>
+                    <router-link to="classification"> 分类</router-link>
+                </a-menu-item>
+                <a-menu-item key="2">
+                    <svg-icon icon-class="xiangce" style="width: 20px; height: 20px; margin-bottom: 4px; margin-right: 1px"></svg-icon>
+                    相册
+                </a-menu-item>
+                <a-menu-item key="3">
+                    <svg-icon icon-class="liuyan" style="width: 24px; height: 24px; margin-bottom: 2px"></svg-icon>
+                    留言
+                </a-menu-item>
+                <a-menu-item key="4">
+                    <svg-icon icon-class="link" style="width: 22px; height: 22px; margin-bottom: 3px"></svg-icon>
+                    友联
+                </a-menu-item>
+                <a-menu-item key="5">
+                    <svg-icon icon-class="about" style="width: 22px; height: 22px; margin-bottom: 2px"></svg-icon>
+                    关于
+                </a-menu-item>
+                <a-menu-item key="6">
+                    <svg-icon icon-class="search" style="width: 18px; height: 18px; margin-top: -1px; margin-right: 3px"></svg-icon>
+                    搜索
+                </a-menu-item>
                 <a-sub-menu key="7">
-                    <template #icon
-                        ><a-avatar style="margin-left: 12px" :size="32"> <img alt="avatar" :src="require('@/assets/img/head.jpg')" /> </a-avatar
-                    ></template>
+                    <template #icon>
+                        <a-avatar style="margin-left: 12px" :size="32"><img alt="avatar" :src="require('@/assets/img/head.jpg')" /> </a-avatar>
+                    </template>
 
-                    <a-menu-item key="1_0"><svg-icon icon-class="login" style="width: 18px; height: 18px; margin-top: 0px; margin-right: 3px"></svg-icon>登录</a-menu-item>
+                    <a-menu-item key="1_0">
+                        <svg-icon icon-class="login" style="width: 18px; height: 18px; margin-top: 0px; margin-right: 3px"></svg-icon>
+                        登录
+                    </a-menu-item>
                 </a-sub-menu>
             </a-menu>
         </div>
@@ -27,7 +51,7 @@
 <style scoped>
 .menu {
     /* display: flex;
-    justify-content: space-around; */
+  justify-content: space-around; */
     width: 100%;
     position: absolute;
     --un-shadow: var(--un-shadow-inset) 0 1px 3px 0 var(--un-shadow-color, rgba(0, 0, 0, 0.1)), var(--un-shadow-inset) 0 1px 2px -1px var(--un-shadow-color, rgba(0, 0, 0, 0.1));
