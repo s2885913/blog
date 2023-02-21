@@ -1,3 +1,12 @@
+<script lang="ts" setup>
+import { useRouter } from 'vue-router'
+const router = useRouter()
+// 跳转到登录页面
+function login() {
+    router.push({ path: '/login' })
+}
+</script>
+
 <template>
     <div class="menu animate__animated animate__fadeInDown">
         <a class="left-logo" href=""><h2>Quinlan</h2></a>
@@ -22,7 +31,7 @@
                 </a-menu-item>
                 <a-menu-item key="4">
                     <svg-icon icon-class="link" style="width: 22px; height: 22px; margin-bottom: 3px"></svg-icon>
-                    友联
+                    <router-link to="/friend"> 友联</router-link>
                 </a-menu-item>
                 <a-menu-item key="5">
                     <svg-icon icon-class="about" style="width: 22px; height: 22px; margin-bottom: 2px"></svg-icon>
@@ -37,7 +46,7 @@
                         <a-avatar style="margin-left: 12px" :size="32"><img alt="avatar" :src="require('@/assets/img/head.jpg')" /> </a-avatar>
                     </template>
 
-                    <a-menu-item key="1_0">
+                    <a-menu-item key="1_0" @click="login">
                         <svg-icon icon-class="login" style="width: 18px; height: 18px; margin-top: 0px; margin-right: 3px"></svg-icon>
                         登录
                     </a-menu-item>
@@ -47,7 +56,6 @@
     </div>
 </template>
 
-<script lang="ts" setup></script>
 <style scoped>
 .menu {
     /* display: flex;
