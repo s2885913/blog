@@ -1,7 +1,9 @@
 package com.lzr.controller;
 
 import com.lzr.result.JsonResult;
+import com.lzr.result.ResultTool;
 import com.lzr.service.ArticleService;
+import com.lzr.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,9 +19,12 @@ public class TestController {
 
     @Autowired
     ArticleService articleService;
+
+    @Autowired
+    UserService userService;
     @GetMapping("/text")
     public JsonResult tt(){
-        return articleService.getList();
+        return ResultTool.success(userService.getUserByName("admin"));
 
     }
 }

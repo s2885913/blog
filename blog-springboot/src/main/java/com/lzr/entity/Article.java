@@ -1,4 +1,4 @@
-package com.lzr.entity.domain;
+package com.lzr.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;

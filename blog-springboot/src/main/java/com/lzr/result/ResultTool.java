@@ -14,11 +14,11 @@ public class ResultTool {
         return new JsonResult(true, data);
     }
 
-    public static JsonResult fail() {
+    public static JsonResult error() {
         return new JsonResult(false);
     }
 
-    public static JsonResult fail(ResultCode resultEnum) {
+    public static JsonResult error(ResultCode resultEnum) {
         return new JsonResult(false, resultEnum);
     }
 }

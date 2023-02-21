@@ -1,7 +1,7 @@
 package com.lzr.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.lzr.entity.domain.Article;
+import com.lzr.entity.Article;
 import com.lzr.result.JsonResult;
 import com.lzr.result.ResultTool;
 import com.lzr.service.ArticleService;

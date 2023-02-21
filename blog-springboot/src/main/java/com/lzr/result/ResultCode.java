@@ -11,6 +11,7 @@ public enum ResultCode {
 
     /* 默认失败 */
     COMMON_FAIL(999, "失败"),
+    Server_Internal_Error(500,"服务器内部错误"),
 
     /* 参数错误：1000～1999 */
     PARAM_NOT_VALID(1001, "参数无效"),
@@ -19,9 +20,9 @@ public enum ResultCode {
     PARAM_NOT_COMPLETE(1004, "参数缺失"),
 
     /* 用户错误 */
-    USER_NOT_LOGIN(2001, "用户未登录"),
+    USER_NOT_LOGIN(2001, "需登录后操作"),
     USER_ACCOUNT_EXPIRED(2002, "账号已过期"),
-    USER_CREDENTIALS_ERROR(2003, "密码错误"),
+    USER_CREDENTIALS_ERROR(2003, "账号或密码错误"),
     USER_CREDENTIALS_EXPIRED(2004, "密码过期"),
     USER_ACCOUNT_DISABLE(2005, "账号不可用"),
     USER_ACCOUNT_LOCKED(2006, "账号被锁定"),
