@@ -1,16 +1,20 @@
+
+let __unconfig_data;
+let __unconfig_stub = function (data = {}) { __unconfig_data = data };
+__unconfig_stub.default = (data = {}) => { __unconfig_data = data };
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import { ArcoResolver } from 'unplugin-vue-components/resolvers'
 import eslintPlugin from 'vite-plugin-eslint'
-import Unocss from 'unocss/vite'
+const Unocss = __unconfig_stub;
 import { presetUno, presetAttributify } from 'unocss'
 import UnocssIcons from '@unocss/preset-icons'
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 import { resolve } from 'path'
 // https://vitejs.dev/config/
-export default defineConfig({
+const __unconfig_default =  defineConfig({
     server: {
         host: '0.0.0.0',
         port: 5174,
@@ -70,3 +74,5 @@ export default defineConfig({
         },
     },
 })
+
+if (typeof __unconfig_default === "function") __unconfig_default(...[{"command":"serve","mode":"development"}]);export default __unconfig_data;
