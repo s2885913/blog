@@ -1,3 +1,34 @@
+<script lang="ts" setup>
+import { type } from '@/utils/typing'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+const images = [
+    'https://blog.zwying.com/usr/uploads/sina/63adb5d48cc08.jpg',
+    'https://blog.zwying.com/usr/uploads/sina/63adb5d26977a.jpg',
+    'https://blog.zwying.com/usr/uploads/sina/63adb5d11dbcc.jpg',
+]
+
+//箭头向下滚动页面
+const scroolTop = () => {
+    const pageId: any = document.querySelector('.content')
+
+    window.scrollTo({
+        top: pageId.offsetTop,
+        behavior: 'smooth',
+    })
+}
+
+onMounted(() => {
+    type()
+})
+
+// 跳转到文章页面
+function goToArticle() {
+    router.push({ path: '/article' })
+}
+</script>
+
 <template>
     <!-- <TopBar></TopBar> -->
     <div class="main">
@@ -121,7 +152,7 @@
                             </a-carousel-item>
                         </a-carousel>
                     </div>
-                    <div class="article">
+                    <div class="article" @click="goToArticle">
                         <article-list-img></article-list-img>
                         <ArticleListInfo></ArticleListInfo>
                     </div>
@@ -135,29 +166,6 @@
     </div>
 </template>
 
-<script lang="ts" setup>
-import { type } from '@/utils/typing'
-
-const images = [
-    'https://blog.zwying.com/usr/uploads/sina/63adb5d48cc08.jpg',
-    'https://blog.zwying.com/usr/uploads/sina/63adb5d26977a.jpg',
-    'https://blog.zwying.com/usr/uploads/sina/63adb5d11dbcc.jpg',
-]
-
-//箭头向下滚动页面
-const scroolTop = () => {
-    const pageId: any = document.querySelector('.content')
-
-    window.scrollTo({
-        top: pageId.offsetTop,
-        behavior: 'smooth',
-    })
-}
-
-onMounted(() => {
-    type()
-})
-</script>
 <style scoped less>
 .main .banner {
     /* position: fixed; */

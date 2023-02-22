@@ -23,6 +23,7 @@ declare module '@vue/runtime-core' {
     AMenu: typeof import('@arco-design/web-vue')['Menu']
     AMenuItem: typeof import('@arco-design/web-vue')['MenuItem']
     ARow: typeof import('@arco-design/web-vue')['Row']
+    Article: typeof import('./src/views/article/index.vue')['default']
     ArticleListImg: typeof import('./src/components/layout/ArticleListImg.vue')['default']
     ArticleListInfo: typeof import('./src/components/layout/ArticleListInfo.vue')['default']
     ASubMenu: typeof import('@arco-design/web-vue')['SubMenu']
