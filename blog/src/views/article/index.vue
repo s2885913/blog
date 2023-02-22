@@ -1,7 +1,11 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
-const klmy1 = ref('')
+const klmy1 = ref('/src/assets/img/klmy.png')
+const klmy2 = ref('/src/assets/img/klmy2.png')
+const klmy3 = ref('/src/assets/img/klmy3.png')
+const klmy4 = ref('/src/assets/img/klmy4.png')
+const klmy5 = ref('/src/assets/img/klmy5.png')
 </script>
 
 <template>
@@ -108,17 +112,17 @@ const klmy1 = ref('')
                         </blockquote>
                         <h3>沙俄版图下的克里米亚</h3>
                         <p>有“黑海门户”之称的克里米亚半岛，因为地理位置上的优异，千年以来经历了许多国家和帝国的统治，也有许多民族居住在其间。</p>
-                        <p><img src="https://file.poetize.cn/articlePicture/Sara11668912337614" alt="俄罗斯帝国版图.png" /></p>
+                        <p><img :src="klmy1" alt="俄罗斯帝国版图.png" /></p>
                         <h3>第六次俄土战争</h3>
                         <p>1787-1792 年第六次俄土战争，俄罗斯在此战争的胜利迫使土耳其人彻底放弃对克里米亚半岛的主权，承认其归属于俄罗斯的版图。</p>
-                        <p><img src="https://file.poetize.cn/articlePicture/Sara11668912283930" alt="第六次俄土战争.jpg" /></p>
+                        <p><img :src="klmy2" alt="第六次俄土战争.jpg" /></p>
                         <h4>克里米亚战争</h4>
                         <p>
                             1853 年俄罗斯帝国与土耳其帝国之间爆发了“克里米亚战争”，又称“第九次俄土战争”，原因是奥斯曼帝国内部逐渐地瓦解，俄罗斯认为这是其向欧洲扩张的好机会。<br />
                             1854 年底法兰西帝国、大英帝国也对俄宣战，它们不希望俄罗斯获得这些战略要地，以维持它们自己在东南欧的势力和利益。隔年萨丁尼亚王国决定加入此一同盟。<br />
                             1854年9月，联军在克里米亚半岛登陆并围攻俄罗斯黑海舰队基地塞瓦斯托波尔要塞。塞瓦斯托波尔被围攻近一年后，在法军攻入马拉科夫堡后，联军占领了这个重要的堡垒，此后俄军退出克里米亚半岛，并向联军投降。
                         </p>
-                        <p><img src="https://file.poetize.cn/articlePicture/Sara11668912204732" alt="英法联军围攻塞瓦斯托波尔.jpg" /></p>
+                        <p><img :src="klmy3" alt="英法联军围攻塞瓦斯托波尔.jpg" /></p>
                         <p>1856年初，交战各方开始在巴黎进行和谈。经过两个月的讨价还价，各方签订了《巴黎和约》：</p>
                         <ul>
                             <li>俄罗斯收复克里米亚，但失去了之前在巴尔干与高加索夺取的大量土地。</li>
@@ -129,7 +133,7 @@ const klmy1 = ref('')
                             帝俄时期的俄国试图俄化克里米亚半岛，在 19
                             世纪时开始鼓励俄罗斯人移入此地，同时凯瑟琳大帝及其后继者对克里米亚鞑靼人采取高压政策。克里米亚鞑靼人面临土地被没收、政治迫害等，而被迫迁离半岛。
                         </p>
-                        <p><img src="https://file.poetize.cn/articlePicture/Sara11668912095752" alt="微信截图_20221120103706.png" /></p>
+                        <p><img :src="klmy4" alt="微信截图_20221120103706.png" /></p>
                         <h3 id="toc-3">苏联麾下的克里米亚</h3>
                         <p>
                             十月革命结束之后，布尔什维克党在克里米亚半岛上取得政权，于 1918
@@ -145,7 +149,7 @@ const klmy1 = ref('')
                             <li>1945 年撤销了克里米亚自治苏维埃社会主义共和国的地位，降低其自治的权限，并且降格为克里米亚州。大批俄罗斯族人迁入，半岛的居民结构被永久性改变。</li>
                         </ul>
                         <p>俄罗斯人的势力在半岛上的扩张及深耕，在帝俄前期就已表露无遗。到了苏联前期，整个克里米亚半岛一度可以说是仅剩俄罗斯人及乌克兰人。</p>
-                        <p><img src="https://file.poetize.cn/articlePicture/Sara11668912138740" alt="微信截图_20221120103643.png" /></p>
+                        <p><img :src="klmy5" alt="微信截图_20221120103643.png" /></p>
                         <p>
                             斯大林去世后，赫鲁晓夫上台。早年曾长期在乌克兰工作，曾任乌克兰第一书记的赫鲁晓夫对乌克兰的斯拉夫兄弟充满深情。1953
                             年赫鲁雪夫在庆祝俄罗斯与乌克兰签订的《佩列亚斯拉夫协定》满300 周年之际，于 1954 年 2 月 19
@@ -162,7 +166,13 @@ const klmy1 = ref('')
                         </p>
                         <h5>下集预告</h5>
                         <p>克里米亚公投：俄乌战争的起点</p>
+                        <blockquote>
+                            <p>作者: Sara</p>
+                            <p>版权声明: 转载请注明出处</p>
+                        </blockquote>
                     </div>
+                    <div id="article-like" class="myCenter"><icon-thumb-up-fill :style="{ fontSize: '40px', color: '#ddd' }" /></div>
+                    <div></div>
                 </div>
             </div>
         </a-layout-content>
@@ -240,5 +250,30 @@ const klmy1 = ref('')
     max-width: 800px;
     margin: 0 auto;
     padding: 40px 20px;
+}
+
+/*.myCenter {*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*}*/
+
+.myCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.article-like-icon {
+    font-size: 60px;
+    cursor: pointer;
+    color: var(--greyFont);
+    transition: all 0.5s;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.el-icon-thumb:before {
+    content: '\e739';
 }
 </style>

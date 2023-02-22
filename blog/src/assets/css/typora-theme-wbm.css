@@ -1005,6 +1005,11 @@ div.code-tooltip-content {
     border-radius: 4px;
 }
 
+p img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
 .md-image img {
     border-radius: 4px;
     border-top:1px solid #ccc;
