@@ -65,7 +65,7 @@ function login() {
     --un-shadow: var(--un-shadow-inset) 0 1px 3px 0 var(--un-shadow-color, rgba(0, 0, 0, 0.1)), var(--un-shadow-inset) 0 1px 2px -1px var(--un-shadow-color, rgba(0, 0, 0, 0.1));
     box-shadow: 0 0.5rem 1rem rgb(18 38 63 / 80%);
     border: 1px solid rgba(17, 24, 39, 0.1);
-    z-index: 1;
+    z-index: 2;
 }
 
 .left-logo {

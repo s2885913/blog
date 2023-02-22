@@ -9,6 +9,8 @@ declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     AAvatar: typeof import('@arco-design/web-vue')['Avatar']
     AButton: typeof import('@arco-design/web-vue')['Button']
+    ACard: typeof import('@arco-design/web-vue')['Card']
+    ACardMeta: typeof import('@arco-design/web-vue')['CardMeta']
     ACarousel: typeof import('@arco-design/web-vue')['Carousel']
     ACarouselItem: typeof import('@arco-design/web-vue')['CarouselItem']
     ACol: typeof import('@arco-design/web-vue')['Col']
@@ -25,6 +27,7 @@ declare module '@vue/runtime-core' {
     ArticleListInfo: typeof import('./src/components/layout/ArticleListInfo.vue')['default']
     ASubMenu: typeof import('@arco-design/web-vue')['SubMenu']
     ATypographyParagraph: typeof import('@arco-design/web-vue')['TypographyParagraph']
+    ATypographyText: typeof import('@arco-design/web-vue')['TypographyText']
     ATypographyTitle: typeof import('@arco-design/web-vue')['TypographyTitle']
     Classification: typeof import('./src/views/classification/index.vue')['default']
     Footer: typeof import('./src/components/layout/Footer.vue')['default']

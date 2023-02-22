@@ -25,6 +25,8 @@
     background-size: 300% 300%;
     -webkit-animation: gradientBG 10s ease infinite;
     animation: gradientBG 10s ease infinite;
+    position: relative;
+    z-index: 1;
 }
 
 @keyframes gradientBG {
