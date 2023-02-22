@@ -27,7 +27,6 @@ declare module '@vue/runtime-core' {
     ArticleListInfo: typeof import('./src/components/layout/ArticleListInfo.vue')['default']
     ASubMenu: typeof import('@arco-design/web-vue')['SubMenu']
     ATypographyParagraph: typeof import('@arco-design/web-vue')['TypographyParagraph']
-    ATypographyText: typeof import('@arco-design/web-vue')['TypographyText']
     ATypographyTitle: typeof import('@arco-design/web-vue')['TypographyTitle']
     Classification: typeof import('./src/views/classification/index.vue')['default']
     Footer: typeof import('./src/components/layout/Footer.vue')['default']

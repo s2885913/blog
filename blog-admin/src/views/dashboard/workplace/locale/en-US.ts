@@ -1,5 +1,6 @@
 export default {
   'menu.dashboard.workplace': 'Workplace',
+  'menu.article': 'WriteBlog',
   'workplace.welcome': 'Welcome!',
   'workplace.balance': 'Balance (CNY)',
   'workplace.order.pending': 'Pending',
