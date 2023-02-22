@@ -8,9 +8,6 @@
       <template #title>
         {{ $t('workplace.popularContent') }}
       </template>
-      <template #extra>
-        <a-link>{{ $t('workplace.viewMore') }}</a-link>
-      </template>
       <a-space direction="vertical" :size="10" fill>
         <a-radio-group
           v-model:model-value="type"
