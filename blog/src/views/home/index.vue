@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import { type } from '@/utils/typing'
 import { useRouter } from 'vue-router'
+import { ref } from 'vue'
 
 const router = useRouter()
 const images = [
@@ -27,13 +28,15 @@ onMounted(() => {
 function goToArticle() {
     router.push({ path: '/article' })
 }
+
+const banner = ref('/src/assets/img/banner.jpg')
 </script>
 
 <template>
     <!-- <TopBar></TopBar> -->
     <div class="main">
         <div class="banner">
-            <a-image :src="require('@/assets/img/banner.jpg')" fit="cover" :preview="false" width="100%" height="100%"></a-image>
+            <a-image :src="banner" fit="cover" :preview="false" width="100%" height="100%"></a-image>
             <div class="banner-title">
                 <a-typography-title class="animate__animated animate__fadeInDown" :heading="1"> 山外青山楼外楼,西湖歌舞几时休？</a-typography-title>
                 <a-row justify="center">
