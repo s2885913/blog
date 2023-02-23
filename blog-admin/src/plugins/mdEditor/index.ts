@@ -9,6 +9,9 @@ import Prism from 'prismjs';
 
 VueMarkdownEditor.use(vuepressTheme, {
   Prism,
+  codeHighlightExtensionMap: {
+    vue: 'xml',
+  },
 });
 
 export default VueMarkdownEditor;

@@ -46,10 +46,13 @@
               <a-upload action="/">
                 <template #upload-button>
                   <div class="upload">
-                    <div style="height: 20%; margin-top: 20px"
-                      >123123 <span>123123</span></div
+                    <div style="height: 38%; margin-top: -20px"
+                      ><icon-upload :size="35"
+                    /></div>
+                    <div style="height: 10%; margin-top: -8px"
+                      >将文件拖到此处或
+                      <span style="color: #3370ff">点击上传</span></div
                     >
-                    <div style="height: 20%">123123 <span>123123</span></div>
                   </div>
                 </template>
               </a-upload>
@@ -57,18 +60,28 @@
           </a-col>
           <a-col :span="5">
             <a-form-item field="isComment" label="是否开启评论">
-              <a-radio-group v-model="form.isComment">
+              <a-radio-group v-model="form.isComment" size="large">
                 <a-radio value="1">是</a-radio>
                 <a-radio value="0">否</a-radio>
               </a-radio-group>
             </a-form-item>
+            <a-form-item>
+              <a-button type="primary" @click="preserve">
+                <template #icon><icon-save /></template> 保存到草稿箱</a-button
+              >
+            </a-form-item>
           </a-col>
           <a-col :span="7">
             <a-form-item field="isTop" label="是否文章置顶">
-              <a-radio-group v-model="form.isTop">
+              <a-radio-group v-model="form.isTop" size="large">
                 <a-radio value="1">是</a-radio>
                 <a-radio value="0">否</a-radio>
               </a-radio-group>
+            </a-form-item>
+            <a-form-item>
+              <a-button type="primary" @click="publish">
+                <template #icon><icon-send /></template>发布</a-button
+              >
             </a-form-item>
           </a-col>
         </a-row>
@@ -83,11 +96,9 @@
 <script setup lang="ts">
   import { reactive, ref } from 'vue';
   import mdEditor from '@/components/md-edtior/index.vue';
-  import VMdEditor from '@kangc/v-md-editor';
 
-  const text = ref('');
+  const previewData = ref('');
 
-  const previewData = ref('~~12312312312~~');
   const form = reactive({
     title: '',
     classify: '',
@@ -96,21 +107,15 @@
     isTop: true,
     content: '',
   });
+
+  // 文章保存到草稿箱
+  const preserve = () => {};
+
+  // 文章发布
+  const publish = () => {};
 </script>
 
 <style scoped lang="less">
-  .container {
-    background-color: var(--color-fill-2);
-    padding: 0 20px 20px 20px;
-  }
-
-  .content {
-    padding-top: 20px;
-    background-color: #fff;
-    margin-top: 10px;
-    border-radius: 5px;
-  }
-
   .ed {
     margin-top: 30px;
     padding: 0 10px;

@@ -1,9 +1,3 @@
-<!--
- * @Author: 碎觉
- * @Date: 2023-02-20 10:55:37
- * @LastEditTime: 2023-02-20 14:44:24
- * @Description: 
--->
 <script setup lang="ts">
 import TopBar from '@/components/layout/TopBar.vue'
 import Footer from '@/components/layout/Footer.vue'
@@ -16,8 +10,10 @@ import Footer from '@/components/layout/Footer.vue'
     </div>
 </template>
 <style>
-@import '@/assets/css/var.css';
-
+@import url('@/assets/css/var.css');
+body {
+    overflow-x: hidden !important;
+}
 .thContainer {
     background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
 }

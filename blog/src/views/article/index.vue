@@ -61,7 +61,7 @@ const text = ref(`
 </code></pre>
 </div></div>
 <div class="v-md-plugin-tip tip"><p class="v-md-plugin-tip-title">提示</p>
-<p data-v-md-line="2">你可以点击 toolbar 中的 tip 来快速插入1</p>
+<p data-v-md-line="2">你可以点击 toolbar 中的 tip 来快速插入21</p>
 </div>
 
 `)

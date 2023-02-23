@@ -9,6 +9,8 @@ export default {
   'menu.dashboard': 'Dashboard',
   'menu.article': 'Article Manager',
   'menu.article.write': 'Write Article',
+  'menu.system': 'System Manager',
+  'menu.system.user': 'User Manager',
   'menu.server.dashboard': 'Dashboard-Server',
   'menu.server.workplace': 'Workplace-Server',
   'menu.server.monitor': 'Monitor-Server',
