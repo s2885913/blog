@@ -35,6 +35,7 @@ declare module '@vue/runtime-core' {
     Friend: typeof import('./src/views/friend/index.vue')['default']
     Home: typeof import('./src/views/home/index.vue')['default']
     Login: typeof import('./src/views/login/index.vue')['default']
+    MdEdtior: typeof import('./src/components/md-edtior/index.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     SvgIcon: typeof import('./src/components/icons/SvgIcon.vue')['default']

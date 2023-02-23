@@ -73,14 +73,21 @@
           </a-col>
         </a-row>
       </a-form>
-      <div class="ed"> </div>
+      <div class="ed">
+        <md-editor v-model="previewData" />
+      </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-  import { reactive } from 'vue';
+  import { reactive, ref } from 'vue';
+  import mdEditor from '@/components/md-edtior/index.vue';
+  import VMdEditor from '@kangc/v-md-editor';
 
+  const text = ref('');
+
+  const previewData = ref('~~12312312312~~');
   const form = reactive({
     title: '',
     classify: '',

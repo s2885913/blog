@@ -1,13 +1,3 @@
-<script setup lang="ts">
-import { ref } from 'vue'
-
-const klmy1 = ref('/src/assets/img/klmy.png')
-const klmy2 = ref('/src/assets/img/klmy2.png')
-const klmy3 = ref('/src/assets/img/klmy3.png')
-const klmy4 = ref('/src/assets/img/klmy4.png')
-const klmy5 = ref('/src/assets/img/klmy5.png')
-</script>
-
 <template>
     <div class="theContainer">
         <a-layout-header>
@@ -107,29 +97,7 @@ const klmy5 = ref('/src/assets/img/klmy5.png')
             <div class="main">
                 <div class="articleContainer">
                     <div class="entry-content">
-                        <div data-v-md-line="1">
-                            <div class="v-md-pre-wrapper v-md-pre-wrapper- extra-class">
-                                <pre class="v-md-prism-">
-                                    <code>123123123213123123123123</code>
-                                </pre>
-                            </div>
-                        </div>
-                        <table data-v-md-line="1">
-                            <thead>
-                                <tr>
-                                    <th>123</th>
-                                    <th>column2</th>
-                                    <th>column3</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>123123</td>
-                                    <td>content2</td>
-                                    <td>content3</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <md-editor v-model="text" mode="preview" />
                     </div>
                     <div id="article-like" class="myCenter"><icon-thumb-up-fill :style="{ fontSize: '40px', color: '#ddd' }" /></div>
                     <div></div>
@@ -138,9 +106,41 @@ const klmy5 = ref('/src/assets/img/klmy5.png')
         </a-layout-content>
     </div>
 </template>
+<script setup lang="ts">
+import { ref } from 'vue'
+import mdEditor from '@/components/md-edtior/index.vue'
+
+const text = ref(`
+<h1 data-v-md-heading="王培申" data-v-md-line="1">王培申</h1>
+<hr data-v-md-line="2">
+<table data-v-md-line="3">
+<thead>
+<tr>
+<th>123</th>
+<th>123</th>
+<th>123</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>123</td>
+<td>123</td>
+<td>123</td>
+</tr>
+</tbody>
+</table>
+<hr data-v-md-line="6">
+<div data-v-md-line="7"><div class="v-md-pre-wrapper v-md-pre-wrapper- extra-class"><pre class="v-md-prism-"><code>1231231231232
+</code></pre>
+</div></div>
+<div class="v-md-plugin-tip tip"><p class="v-md-plugin-tip-title">提示</p>
+<p data-v-md-line="2">你可以点击 toolbar 中的 tip 来快速插入1</p>
+</div>
+
+`)
+</script>
 
 <style scoped>
-@import '@/assets/css/typora-theme-wbm.css';
 .layout-demo :deep(.arco-layout-header),
 .layout-demo :deep(.arco-layout-footer),
 .layout-demo :deep(.arco-layout-content) {

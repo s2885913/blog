@@ -12,9 +12,11 @@ import './assets/font/font.css'
 //在main.ts中
 import 'virtual:svg-icons-register'
 import svgIcon from './components/icons/SvgIcon.vue'
-import '@kangc/v-md-editor/lib/theme/style/vuepress.css';
-  
+import plugins from '@/plugins'
+
 const app = createApp(App)
+
+app.use(plugins)
 app.use(router)
 app.use(ArcoVue)
 app.use(ArcoVueIcon)
