@@ -1,29 +1,33 @@
 <template>
-  <div class="container">
+  <div
+    class="container animate__animated animate__slideInRight animate__faster"
+  >
     <Breadcrumb :items="['menu.article', 'menu.article.write']" />
     <div class="content">
       <div class="body">
-        <a-form :model="form" label-align="right" :auto-label-width="true">
-          <a-row :gutter="0" justify="start">
+        <a-form
+          :model="form"
+          label-align="left"
+          :auto-label-width="true"
+          :wrapper-col-props="{ span: 18 }"
+        >
+          <a-row :gutter="16">
             <a-col :span="7">
               <a-form-item field="title" label="文章标题">
                 <a-input
                   v-model="form.title"
-                  size="large"
+                  size="medium"
                   placeholder="请输入文章标题"
                 />
               </a-form-item>
             </a-col>
             <a-col :span="7">
-              <a-form-item
-                field="classify"
-                label="文章分类"
-                label-col-flex="100px"
-              >
+              <a-form-item field="classify" label="文章分类">
                 <a-select
                   v-model="form.classify"
                   placeholder="请选择"
-                  size="large"
+                  :allow-clear="true"
+                  size="medium"
                 >
                   <a-option value="section one">Section One</a-option>
                   <a-option value="section two">Section Two</a-option>
@@ -31,17 +35,23 @@
                 </a-select>
               </a-form-item>
             </a-col>
-            <a-col :span="7">
-              <a-form-item field="tag" label-col-flex="100px" label="文章标签">
-                <a-select v-model="form.tag" placeholder="请选择" multiple>
+            <a-col :span="10">
+              <a-form-item field="tag" label="文章标签">
+                <a-select
+                  v-model="form.tag"
+                  :allow-clear="true"
+                  placeholder="请选择"
+                  multiple
+                >
                   <a-option value="section one">Section One</a-option>
                   <a-option value="section two">Section Two</a-option>
                   <a-option value="section three">Section Three</a-option>
+                  <a-option value="section four">Section Three</a-option>
                 </a-select>
               </a-form-item>
             </a-col>
           </a-row>
-          <a-row :gutter="0" justify="start">
+          <a-row :gutter="16">
             <a-col :span="7">
               <a-form-item field="title" label="缩略图">
                 <a-upload action="/">
@@ -59,41 +69,33 @@
                 </a-upload>
               </a-form-item>
             </a-col>
-            <a-col :span="7" style="display: flex; flex-direction: row">
-              <a-form-item
-                field="isComment"
-                label-col-flex="100px"
-                label="开启评论"
-              >
+            <a-col :span="7">
+              <a-form-item field="isComment" label="开启评论">
                 <a-switch
                   v-model="form.isComment"
                   checked-color="#00B42A"
-                  checked-value="1"
-                  unchecked-value="0"
+                  :checked-value="1"
+                  :unchecked-value="0"
                 />
               </a-form-item>
-              <a-form-item
-                field="isTop"
-                label-col-flex="100px"
-                label="文章置顶"
-              >
-                <a-switch
-                  v-model="form.isTop"
-                  checked-color="#00B42A"
-                  checked-value="1"
-                  unchecked-value="0"
-                />
-              </a-form-item>
-            </a-col>
-            <a-col :span="7" style="display: flex; flex-direction: row">
-              <a-form-item label-col-flex="100px">
-                <a-button type="outline" @click="preserve">
+              <a-form-item :no-style="true">
+                <a-button type="primary" @click="preserve">
                   <template #icon><icon-save /></template>
                   保存</a-button
                 >
               </a-form-item>
-              <a-form-item>
-                <a-button type="outline" @click="publish">
+            </a-col>
+            <a-col :span="7">
+              <a-form-item field="isTop" label="文章置顶">
+                <a-switch
+                  v-model="form.isTop"
+                  checked-color="#00B42A"
+                  :checked-value="1"
+                  :unchecked-value="0"
+                />
+              </a-form-item>
+              <a-form-item :no-style="true">
+                <a-button type="primary" @click="publish">
                   <template #icon><icon-send /></template>发布</a-button
                 >
               </a-form-item>
@@ -101,7 +103,7 @@
           </a-row>
         </a-form>
         <div class="ed">
-          <md-editor v-model="previewData" />
+          <!-- <md-editor v-model="previewData" /> -->
         </div>
       </div>
     </div>
@@ -118,8 +120,8 @@
     title: '',
     classify: '',
     tag: [],
-    isComment: true,
-    isTop: true,
+    isComment: 0,
+    isTop: 1,
     content: '',
   });
 
@@ -140,9 +142,13 @@
     width: 100%;
   }
 
+  .arco-btn-group .arco-btn:last-child {
+    border-radius: 5px !important;
+  }
+
   .upload {
     position: relative;
-    background-color: #fff;
+    background-color: var(--color-bg-1);
     color: var(--color-text-1);
     border: 1px dashed var(--color-fill-4);
     height: 158px;

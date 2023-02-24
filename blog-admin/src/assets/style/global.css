@@ -16,30 +16,18 @@ body {
   background-color: var(--color-fill-2);
   padding: 0 20px 20px 20px;
 }
-.arco-table .arco-table-th {
-  background-color: #fff;
-  border-bottom: 1px solid #ddd;
-}
 .content {
-  background-color: #fff;
+  background-color: var(--color-bg-1);
   border-radius: 5px;
 }
 .body {
   padding: 20px;
 }
-button {
+.arco-btn-group .arco-btn:last-child {
   border-radius: 5px !important;
 }
-.arco-input-wrapper,
-.arco-select-view-single,
-.arco-select-view {
-  border-color: #ddd;
-  background-color: #fff !important;
-}
-.arco-input-wrapper:hover,
-.arco-select-view-single:hover,
-.arco-select-view:hover {
-  border-color: #0052d9;
+.arco-modal-header .arco-modal-title-align-center {
+  justify-content: center !important;
 }
 .echarts-tooltip-diy {
   background: linear-gradient(304.17deg, rgba(253, 254, 255, 0.6) -6.04%, rgba(244, 247, 252, 0.6) 85.2%) !important;

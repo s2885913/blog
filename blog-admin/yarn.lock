@@ -36,6 +36,11 @@
     resize-observer-polyfill "^1.5.1"
     scroll-into-view-if-needed "^2.2.28"
 
+"@arco-themes/vue-digitforce@^0.0.46":
+  version "0.0.46"
+  resolved "https://registry.npmmirror.com/@arco-themes/vue-digitforce/-/vue-digitforce-0.0.46.tgz#5af3b83d01df3b3dccf5588b1b3e9295172aa88b"
+  integrity sha512-vqFV1wS+jaU+lFZSdx1rzJgLgoLLu4L0qwm8646tkAXOptbnkV8e2rYqNYb4RKreCKBm5asbN4OrAzeI8m83Wg==
+
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.18.6":
   version "7.18.6"
   resolved "https://registry.npmmirror.com/@babel/code-frame/-/code-frame-7.18.6.tgz#3b25d38c89600baa2dcc219edfa88a74eb2c427a"
@@ -1276,6 +1281,11 @@ ajv@^8.0.1, ajv@^8.11.0:
     json-schema-traverse "^1.0.0"
     require-from-string "^2.0.2"
     uri-js "^4.2.2"
+
+animate.css@^4.1.1:
+  version "4.1.1"
+  resolved "https://registry.npmmirror.com/animate.css/-/animate.css-4.1.1.tgz#614ec5a81131d7e4dc362a58143f7406abd68075"
+  integrity sha512-+mRmCTv6SbCmtYJCN4faJMNFVNN5EuCTTprDTAo7YzIGji2KADmakjVA3+8mVDkZ2Bf09vayB35lSQIex2+QaQ==
 
 ansi-escapes@^4.3.0:
   version "4.3.2"

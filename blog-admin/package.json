@@ -31,8 +31,10 @@
   },
   "dependencies": {
     "@arco-design/web-vue": "^2.40.0",
+    "@arco-themes/vue-digitforce": "^0.0.46",
     "@kangc/v-md-editor": "^2.3.15",
     "@vueuse/core": "^9.3.0",
+    "animate.css": "^4.1.1",
     "arco-design-pro-vue": "^2.6.1",
     "axios": "^0.24.0",
     "dayjs": "^1.11.5",
