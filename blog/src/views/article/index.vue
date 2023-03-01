@@ -24,7 +24,7 @@
             <div class="main">
                 <div class="articleContainer">
                     <div class="entry-content">
-                        <md-editor v-model="text" mode="preview" />
+                        <md-editor v-model="state.text" preview-only :no-prettier="true" preview-theme="vuepress" :auto-detect-code="true" />
                     </div>
                     <div id="article-like" class="myCenter"><icon-thumb-up-fill :style="{ fontSize: '40px', color: '#ddd' }" /></div>
                     <div></div>
@@ -34,37 +34,23 @@
     </div>
 </template>
 <script setup lang="ts">
-import { ref } from 'vue'
-import mdEditor from '@/components/md-edtior/index.vue'
+import { reactive } from 'vue'
+import MdEditor from 'md-editor-v3'
+import 'md-editor-v3/lib/style.css'
 
-const text = ref(`
-<h1 data-v-md-heading="王培申" data-v-md-line="1">王培申</h1>
-<hr data-v-md-line="2">
-<table data-v-md-line="3">
-<thead>
-<tr>
-<th>123</th>
-<th>123</th>
-<th>123</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>123</td>
-<td>123</td>
-<td>123</td>
-</tr>
-</tbody>
-</table>
-<hr data-v-md-line="6">
-<div data-v-md-line="7"><div class="v-md-pre-wrapper v-md-pre-wrapper- extra-class"><pre class="v-md-prism-"><code>1231231231232
-</code></pre>
-</div></div>
-<div class="v-md-plugin-tip tip"><p class="v-md-plugin-tip-title">提示</p>
-<p data-v-md-line="2">你可以点击 toolbar 中的 tip 来快速插入21</p>
-</div>
-
-`)
+const state = reactive({
+    text: `<blockquote>
+<p>在线尝试示例：<a href="https://codesandbox.io/s/epic-bird-2znqo" title="" target="_blank">传送门</a></p>
+</blockquote>
+<h2 id="🤯 Props 说明"><a href="#🤯 Props 说明">🤯 Props 说明</a></h2><p>这是组件最重要的一部分内容，<code>md-editor-v3</code>的属性参数如下：</p>
+<h3 id="📃 modelValue"><a href="#📃 modelValue">📃 modelValue</a></h3><ul>
+<li><p><strong>类型</strong>：<code>string</code></p>
+</li><li><p><strong>默认值</strong>：<code>''</code></p>
+<p>编辑的内容。</p>
+<pre><code class="language-html"><span class="code-block"><span class="hljs-tag">&lt;<span class="hljs-name">md-editor-v3</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">"xxx"</span> /&gt;</span></span><span rn-wrapper="" aria-hidden="true"><span></span></span>
+</code><span class="copy-button">复制代码</span></pre>
+</li></ul>`,
+})
 </script>
 
 <style scoped>

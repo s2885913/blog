@@ -103,7 +103,14 @@
           </a-row>
         </a-form>
         <div class="ed">
-          <!-- <md-editor v-model="previewData" /> -->
+          <md-editor
+            v-model="state.text"
+            :no-prettier="true"
+            preview-theme="vuepress"
+            :auto-detect-code="true"
+            @on-get-catalog="onGetCatalog"
+          >
+          </md-editor>
         </div>
       </div>
     </div>
@@ -111,10 +118,15 @@
 </template>
 
 <script setup lang="ts">
-  import { reactive, ref } from 'vue';
-  import mdEditor from '@/components/md-edtior/index.vue';
+  import { reactive } from 'vue';
+  import MdEditor from 'md-editor-v3';
+  import 'md-editor-v3/lib/style.css';
 
-  const previewData = ref('');
+  // markdown编辑器设置
+  const state = reactive({
+    text: '',
+    catalogList: [],
+  });
 
   const form = reactive({
     title: '',
@@ -124,6 +136,11 @@
     isTop: 1,
     content: '',
   });
+
+  const onGetCatalog = (list: any) => {
+    state.catalogList = list;
+    console.log(state.catalogList);
+  };
 
   // 文章保存到草稿箱
   const preserve = () => {};
