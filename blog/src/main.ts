@@ -15,7 +15,6 @@ import svgIcon from './components/icons/SvgIcon.vue'
 import plugins from '@/plugins'
 
 const app = createApp(App)
-
 app.use(plugins)
 app.use(router)
 app.use(ArcoVue)

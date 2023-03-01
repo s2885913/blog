@@ -23,7 +23,7 @@ function login() {
                 </a-menu-item>
                 <a-menu-item key="2">
                     <svg-icon icon-class="xiangce" style="width: 20px; height: 20px; margin-bottom: 4px; margin-right: 1px"></svg-icon>
-                    相册
+                    <routerlink to="">相册</routerlink>
                 </a-menu-item>
                 <a-menu-item key="3">
                     <svg-icon icon-class="liuyan" style="width: 24px; height: 24px; margin-bottom: 2px"></svg-icon>

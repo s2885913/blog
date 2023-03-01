@@ -37,34 +37,11 @@
 import { ref } from 'vue'
 import mdEditor from '@/components/md-edtior/index.vue'
 
-const text = ref(`
-<h1 data-v-md-heading="王培申" data-v-md-line="1">王培申</h1>
-<hr data-v-md-line="2">
-<table data-v-md-line="3">
-<thead>
-<tr>
-<th>123</th>
-<th>123</th>
-<th>123</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>123</td>
-<td>123</td>
-<td>123</td>
-</tr>
-</tbody>
-</table>
-<hr data-v-md-line="6">
-<div data-v-md-line="7"><div class="v-md-pre-wrapper v-md-pre-wrapper- extra-class"><pre class="v-md-prism-"><code>1231231231232
-</code></pre>
-</div></div>
-<div class="v-md-plugin-tip tip"><p class="v-md-plugin-tip-title">提示</p>
-<p data-v-md-line="2">你可以点击 toolbar 中的 tip 来快速插入1</p>
-</div>
-
-`)
+const text = ref(`\`\`\`json
+{
+  "key": "value"
+}
+\`\`\``)
 </script>
 
 <style scoped>
