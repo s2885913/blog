@@ -38,13 +38,11 @@ import { reactive } from 'vue'
 import MdEditor from 'md-editor-v3'
 import 'md-editor-v3/lib/style.css'
 
-<<<<<<< HEAD
 const text = ref(`\`\`\`json
 {
   "key": "value"
 }
 \`\`\``)
-=======
 const state = reactive({
     text: `<blockquote>
 <p>在线尝试示例：<a href="https://codesandbox.io/s/epic-bird-2znqo" title="" target="_blank">传送门</a></p>
@@ -58,7 +56,6 @@ const state = reactive({
 </code><span class="copy-button">复制代码</span></pre>
 </li></ul>`,
 })
->>>>>>> 57a5638b5ea21e9e6ca715d8bda15ce30d553ac6
 </script>
 
 <style scoped>

@@ -23,7 +23,7 @@ function login() {
                 </a-menu-item>
                 <a-menu-item key="2">
                     <svg-icon icon-class="xiangce" style="width: 20px; height: 20px; margin-bottom: 4px; margin-right: 1px"></svg-icon>
-                    <routerlink to="">相册</routerlink>
+                    <router-link to="/picture">相册</router-link>
                 </a-menu-item>
                 <a-menu-item key="3">
                     <svg-icon icon-class="liuyan" style="width: 24px; height: 24px; margin-bottom: 2px"></svg-icon>
@@ -66,6 +66,7 @@ function login() {
     box-shadow: 0 0.5rem 1rem rgb(18 38 63 / 80%);
     border: 1px solid rgba(17, 24, 39, 0.1);
     z-index: 2;
+    background: rgba(0, 0, 0, 0.3);
 }
 
 .left-logo {
