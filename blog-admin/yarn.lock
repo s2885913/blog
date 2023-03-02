@@ -36,6 +36,11 @@
     resize-observer-polyfill "^1.5.1"
     scroll-into-view-if-needed "^2.2.28"
 
+"@arco-themes/vue-digitforce@^0.0.46":
+  version "0.0.46"
+  resolved "https://registry.npmmirror.com/@arco-themes/vue-digitforce/-/vue-digitforce-0.0.46.tgz#5af3b83d01df3b3dccf5588b1b3e9295172aa88b"
+  integrity sha512-vqFV1wS+jaU+lFZSdx1rzJgLgoLLu4L0qwm8646tkAXOptbnkV8e2rYqNYb4RKreCKBm5asbN4OrAzeI8m83Wg==
+
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.18.6":
   version "7.18.6"
   resolved "https://registry.npmmirror.com/@babel/code-frame/-/code-frame-7.18.6.tgz#3b25d38c89600baa2dcc219edfa88a74eb2c427a"
@@ -48,7 +53,7 @@
   resolved "https://registry.npmmirror.com/@babel/compat-data/-/compat-data-7.21.0.tgz#c241dc454e5b5917e40d37e525e2f4530c399298"
   integrity sha512-gMuZsmsgxk/ENC3O/fRw5QY8A9/uxQbbCEypnLIiYYc/qVJtEV7ouxC3EllIIwNzMqAQee5tanFabWsUOutS7g==
 
-"@babel/core@>=7.2.2", "@babel/core@^7.19.6":
+"@babel/core@>=7.2.2", "@babel/core@^7.15.5", "@babel/core@^7.19.6":
   version "7.21.0"
   resolved "https://registry.npmmirror.com/@babel/core/-/core-7.21.0.tgz#1341aefdcc14ccc7553fcc688dd8986a2daffc13"
   integrity sha512-PuxUbxcW6ZYe656yL3EAhpy7qXKq0DmYsrJLpbB8XrsCP9Nm+XCg9XFMb5vIDliPD7+U/+M+QJlH17XOcB7eXA==
@@ -1277,6 +1282,11 @@ ajv@^8.0.1, ajv@^8.11.0:
     require-from-string "^2.0.2"
     uri-js "^4.2.2"
 
+animate.css@^4.1.1:
+  version "4.1.1"
+  resolved "https://registry.npmmirror.com/animate.css/-/animate.css-4.1.1.tgz#614ec5a81131d7e4dc362a58143f7406abd68075"
+  integrity sha512-+mRmCTv6SbCmtYJCN4faJMNFVNN5EuCTTprDTAo7YzIGji2KADmakjVA3+8mVDkZ2Bf09vayB35lSQIex2+QaQ==
+
 ansi-escapes@^4.3.0:
   version "4.3.2"
   resolved "https://registry.npmmirror.com/ansi-escapes/-/ansi-escapes-4.3.2.tgz#6b2291d1db7d98b6521d5f1efa42d0f3a9feb65e"
@@ -1511,6 +1521,11 @@ b-validate@^1.3.1:
   version "1.4.4"
   resolved "https://registry.npmmirror.com/b-validate/-/b-validate-1.4.4.tgz#084e8e1b1e2cdc5d9da72566b56d067bebae2dd7"
   integrity sha512-E2tnSnxxKDyxP1G+TMTbVHA8XajfHHOJKeWm9YVRISSPtzTL7ZP/7tIYp01b+O83L5R/6i31+Su+vCOJBnQWFQ==
+
+babel-plugin-prismjs@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.npmmirror.com/babel-plugin-prismjs/-/babel-plugin-prismjs-2.1.0.tgz#ade627896106326ad04d6d77fba92877618de571"
+  integrity sha512-ehzSKYfeAz4U78zi/sfwsjDPlq0LvDKxNefcZTJ/iKBu+plsHsLqZhUeGf1+82LAcA35UZGbU6ksEx2Utphc/g==
 
 bail@^1.0.0:
   version "1.0.5"
@@ -3214,9 +3229,9 @@ echarts@^5.4.0:
     zrender "5.4.1"
 
 electron-to-chromium@^1.4.284:
-  version "1.4.305"
-  resolved "https://registry.npmmirror.com/electron-to-chromium/-/electron-to-chromium-1.4.305.tgz#e4dfe3e06ab783f33171f9bde9e8ed092510fcd0"
-  integrity sha512-WETy6tG0CT5gm1O+xCbyapWNsCcmIvrn4NHViIGYo2AT8FV2qUCXdaB+WqYxSv/vS5mFqhBYnfZAAkVArjBmUg==
+  version "1.4.308"
+  resolved "https://registry.npmmirror.com/electron-to-chromium/-/electron-to-chromium-1.4.308.tgz#39e7047579867c59973eec5168d8bf440780cb7a"
+  integrity sha512-qyTx2aDFjEni4UnRWEME9ubd2Xc9c0zerTUl/ZinvD4QPsF0S7kJTV/Es/lPCTkNX6smyYar+z/n8Cl6pFr8yQ==
 
 emoji-regex@^7.0.1:
   version "7.0.3"
@@ -6100,6 +6115,11 @@ mathml-tag-names@^2.0.1, mathml-tag-names@^2.1.3:
   version "2.1.3"
   resolved "https://registry.npmmirror.com/mathml-tag-names/-/mathml-tag-names-2.1.3.tgz#4ddadd67308e780cf16a47685878ee27b736a0a3"
   integrity sha512-APMBEanjybaPzUrfqU0IMU5I0AswKMH7k8OTLs0vvV4KZpExkTkY87nR/zpbuTPj+gARop7aGUbl11pnDfW6xg==
+
+md-editor-v3@^2.8.1:
+  version "2.8.1"
+  resolved "https://registry.npmmirror.com/md-editor-v3/-/md-editor-v3-2.8.1.tgz#190ed35d7c9aaa13b8255e0211b83da3ad1e6c23"
+  integrity sha512-xAPcwIHmL+jR5SNztBXSYN2/9L92dOTVs81QjzJAz9Og1o8HDEQnWcFbwG4aqNLCINPgUBgX370ajF6zc4bHEA==
 
 mdast-util-compact@^1.0.0:
   version "1.0.4"
@@ -9031,6 +9051,14 @@ vite-plugin-imagemin@^0.6.1:
     imagemin-webp "^6.0.0"
     jpegtran-bin "^6.0.1"
     pathe "^0.2.0"
+
+vite-plugin-prismjs@^0.0.8:
+  version "0.0.8"
+  resolved "https://registry.npmmirror.com/vite-plugin-prismjs/-/vite-plugin-prismjs-0.0.8.tgz#124cd857333d3160b49b23480ade3c3ed2c4d53f"
+  integrity sha512-mBPPMS/hwVUArdqCtp/oajZT7iq1qwJDDCciNZ3R5+Q5tQUuUHXtDKuZHYnklPLElNbENf2FyuOtC4FrgxQRAA==
+  dependencies:
+    "@babel/core" "^7.15.5"
+    babel-plugin-prismjs "^2.1.0"
 
 vite-plugin-style-import@1.4.1:
   version "1.4.1"

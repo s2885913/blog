@@ -1,9 +1,3 @@
-/*
- * @Author: 碎觉
- * @Date: 2023-02-20 10:55:37
- * @LastEditTime: 2023-02-20 11:06:16
- * @Description:
- */
 import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
 
 const routes: Array<RouteRecordRaw> = [

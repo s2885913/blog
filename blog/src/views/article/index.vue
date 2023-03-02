@@ -24,7 +24,7 @@
             <div class="main">
                 <div class="articleContainer">
                     <div class="entry-content">
-                        <md-editor v-model="text" mode="preview" />
+                        <md-editor v-model="state.text" preview-only :no-prettier="true" preview-theme="vuepress" :auto-detect-code="true" />
                     </div>
                     <div id="article-like" class="myCenter"><icon-thumb-up-fill :style="{ fontSize: '40px', color: '#ddd' }" /></div>
                     <div></div>
@@ -34,14 +34,31 @@
     </div>
 </template>
 <script setup lang="ts">
-import { ref } from 'vue'
-import mdEditor from '@/components/md-edtior/index.vue'
+import { reactive } from 'vue'
+import MdEditor from 'md-editor-v3'
+import 'md-editor-v3/lib/style.css'
 
+<<<<<<< HEAD
 const text = ref(`\`\`\`json
 {
   "key": "value"
 }
 \`\`\``)
+=======
+const state = reactive({
+    text: `<blockquote>
+<p>在线尝试示例：<a href="https://codesandbox.io/s/epic-bird-2znqo" title="" target="_blank">传送门</a></p>
+</blockquote>
+<h2 id="🤯 Props 说明"><a href="#🤯 Props 说明">🤯 Props 说明</a></h2><p>这是组件最重要的一部分内容，<code>md-editor-v3</code>的属性参数如下：</p>
+<h3 id="📃 modelValue"><a href="#📃 modelValue">📃 modelValue</a></h3><ul>
+<li><p><strong>类型</strong>：<code>string</code></p>
+</li><li><p><strong>默认值</strong>：<code>''</code></p>
+<p>编辑的内容。</p>
+<pre><code class="language-html"><span class="code-block"><span class="hljs-tag">&lt;<span class="hljs-name">md-editor-v3</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">"xxx"</span> /&gt;</span></span><span rn-wrapper="" aria-hidden="true"><span></span></span>
+</code><span class="copy-button">复制代码</span></pre>
+</li></ul>`,
+})
+>>>>>>> 57a5638b5ea21e9e6ca715d8bda15ce30d553ac6
 </script>
 
 <style scoped>
