@@ -37,6 +37,7 @@ declare module '@vue/runtime-core' {
     Home: typeof import('./src/views/home/index.vue')['default']
     Login: typeof import('./src/views/login/index.vue')['default']
     MdEdtior: typeof import('./src/components/md-edtior/index.vue')['default']
+    Message: typeof import('./src/components/layout/Message.vue')['default']
     Picture: typeof import('./src/views/picture/index.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']

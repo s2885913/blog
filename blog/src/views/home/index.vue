@@ -2,6 +2,7 @@
 import { type } from '@/utils/typing'
 import { useRouter } from 'vue-router'
 import { ref } from 'vue'
+import Footer from '@/components/layout/Footer.vue'
 
 const router = useRouter()
 const images = [
@@ -166,6 +167,7 @@ const banner = ref('/src/assets/img/banner.jpg')
                 </a-col>
             </a-row>
         </div>
+        <Footer></Footer>
     </div>
 </template>
 

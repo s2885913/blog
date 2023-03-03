@@ -31,11 +31,13 @@
                 </div>
             </div>
         </a-layout-content>
+        <Footer></Footer>
     </div>
 </template>
 <script setup lang="ts">
 import { reactive } from 'vue'
 import MdEditor from 'md-editor-v3'
+import Footer from '@/components/layout/Footer.vue'
 import 'md-editor-v3/lib/style.css'
 
 const text = ref(`\`\`\`json

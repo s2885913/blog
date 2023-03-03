@@ -4,6 +4,7 @@ import info1 from '@/assets/img/friend/info1.png'
 import info2 from '@/assets/img/friend/info2.png'
 import info3 from '@/assets/img/friend/info3.png'
 import { IconThumbUp, IconShareInternal, IconMore } from '@arco-design/web-vue/es/icon'
+import Footer from '@/components/layout/Footer.vue'
 
 const infoOne = ref(info1)
 const infoTwo = ref(info2)
@@ -77,6 +78,7 @@ const cardMessage = reactive([{ id: 0 }, { id: 1 }, { id: 2 }, { id: 3 }, { id: 
                 </div>
             </div>
         </a-layout-content>
+        <Footer></Footer>
     </div>
 </template>
 

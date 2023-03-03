@@ -1,6 +1,7 @@
 <script setup>
 import { reactive } from 'vue'
 import { Notification } from '@arco-design/web-vue'
+import Footer from '@/components/layout/Footer.vue'
 
 const loginForm = reactive({
     username: '',
@@ -139,6 +140,7 @@ function submit(formData) {
                 </div>
             </div>
         </a-layout-content>
+        <Footer></Footer>
     </div>
 </template>
 

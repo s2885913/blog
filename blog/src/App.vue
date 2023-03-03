@@ -1,12 +1,10 @@
 <script setup lang="ts">
 import TopBar from '@/components/layout/TopBar.vue'
-import Footer from '@/components/layout/Footer.vue'
 </script>
 <template>
     <div class="thContainer">
         <TopBar></TopBar>
         <router-view></router-view>
-        <Footer></Footer>
     </div>
 </template>
 <style>

@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Comment from '@/components/layout/Comment.vue'
 import { ref, reactive } from 'vue'
+import Footer from '@/components/layout/Footer.vue'
 
 let img1 = ref('/src/assets/img/picture/img1.jpeg')
 let img2 = ref('/src/assets/img/picture/img2.jpeg')
@@ -138,6 +139,7 @@ function toggleCount(index: any) {
                 </div>
             </div>
         </div>
+        <Footer></Footer>
     </div>
 </template>
 
