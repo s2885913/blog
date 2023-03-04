@@ -67,7 +67,7 @@
 
               <a-form-item style="margin-bottom: 0">
                 <a-popconfirm content="你确定要删除吗?">
-                  <a-button type="primary" status="danger" @click="deleteUser"
+                  <a-button type="primary" status="warning" @click="deleteUser"
                     ><template #icon><icon-delete /></template>删除</a-button
                   >
                 </a-popconfirm>
