@@ -8,6 +8,7 @@
 import { reactive } from 'vue'
 import ArticleListImg from '@/components/layout/ArticleListImg.vue'
 import ArticleListInfo from '@/components/layout/ArticleListInfo.vue'
+import Footer from '@/components/layout/Footer.vue'
 
 // 文章请求数据--这个是模拟数据
 const articleContent = reactive([{ id: 0 }, { id: 1 }, { id: 2 }])
@@ -58,6 +59,7 @@ const articleContent = reactive([{ id: 0 }, { id: 1 }, { id: 2 }])
             </div>
         </a-layout-content>
         <!-- </a-layout> -->
+        <Footer></Footer>
     </div>
 </template>
 

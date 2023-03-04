@@ -1,10 +1,22 @@
 <script setup lang="ts">
 const props = defineProps({
-    img: Object,
-    nickname: String,
+    img: {
+        type: String,
+        default: String,
+    },
+    nickname: {
+        type: String,
+        default: String,
+    },
     // username: String,
-    time: String,
-    content: String,
+    time: {
+        type: String,
+        default: String,
+    },
+    content: {
+        type: String,
+        default: String,
+    },
 })
 </script>
 
@@ -14,15 +26,15 @@ const props = defineProps({
         <div class="info">
             <div class="nameAndTime">
                 <div>
-                    <span class="commentInfo-username">{{ nickname }}</span>
+                    <span class="commentInfo-username">{{ props.nickname }}</span>
                     <!--                    <span class="commentInfo-master">{{ username }}</span>-->
-                    <span class="commentInfo-other">{{ time }}</span>
+                    <span class="commentInfo-other">{{ props.time }}</span>
                 </div>
                 <div class="commentInfo-reply"><!----><span>回复</span></div>
             </div>
             <div>
                 <div class="commentInfo-content">
-                    <span>{{ content }}</span>
+                    <span>{{ props.content }}</span>
                 </div>
             </div>
         </div>

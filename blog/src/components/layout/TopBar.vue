@@ -27,7 +27,7 @@ function login() {
                 </a-menu-item>
                 <a-menu-item key="3">
                     <svg-icon icon-class="liuyan" style="width: 24px; height: 24px; margin-bottom: 2px"></svg-icon>
-                    留言
+                    <router-link to="/message">留言</router-link>
                 </a-menu-item>
                 <a-menu-item key="4">
                     <svg-icon icon-class="link" style="width: 22px; height: 22px; margin-bottom: 3px"></svg-icon>

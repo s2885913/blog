@@ -36,6 +36,11 @@ declare module '@vue/runtime-core' {
     Friend: typeof import('./src/views/friend/index.vue')['default']
     Home: typeof import('./src/views/home/index.vue')['default']
     Login: typeof import('./src/views/login/index.vue')['default']
+<<<<<<< HEAD
+=======
+    MdEdtior: typeof import('./src/components/md-edtior/index.vue')['default']
+    Message: typeof import('./src/components/layout/Message.vue')['default']
+>>>>>>> 85126f8757bbc574da3ab647457a41986386cf1a
     Picture: typeof import('./src/views/picture/index.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
